@@ -1,0 +1,87 @@
+
+:root{
+    --gr: linear-gradient(to right, #e2062e, #0b5adb);
+    --solid: #e2062e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    transition: all 200ms ease-in;
+}
+
+.gr {
+    background: linear-gradient(to right, #e2062e, #0b5adb);
+}
+
+.sol {
+    color: #e2062e;
+}
+
+.sol-bg {
+    background: #e2062e;
+}
+
+.cw {
+    color: white;
+}
+
+
+.footer-nav{
+    display: none !important;
+}
+body a {
+    text-decoration: none;
+    color: rgb(185, 186, 189);
+}
+
+i {
+    color: rgb(185, 186, 189);
+}
+input:focus{
+    outline: none;
+}
+
+
+
+/* left side  ----------------------------------------------------------------------------------->*/
+.left-side {
+    height: 100%;
+    // width: 220px;
+}
+
+.inner-container{
+    border: none !important;
+}
+.inner-main-container .inner-container,
+.left-side {
+    border-radius: 10px 0 0 10px !important;
+    border: 1px solid #2e3035;
+}
+.inner-main-container .inner-container,
+.right-side {
+    border-radius: 0 10px 10px 0 !important;
+    border: 1px solid #2e3035;
+    height: 100%;
+}
+.channel-name-hide-in{
+    display: none;
+    transition: all 300ms ease-in;
+}
+
+.left-top {
+    border-radius: 10px 0 0 0 !important;
+    border: 1px solid #2e3035;
+}
+
+/* left side  ------------------------------------------------------------------->*/
+
+
+/* right side --------------------------------------------------------------------------------->*/
+.right-top {
+    border: 1px solid #2e3035;
+}
+

@@ -268,7 +268,7 @@ i{
 }
 
 body {
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
 }
 
@@ -290,18 +290,18 @@ i {
     background-color: rgba(57, 56, 56, 0.637);
 }
 
-input {
+.top-bar-container input {
     border: none;
     color: white;
     padding: 1px;
 }
 
-input::placeholder {
+.top-bar-container input::placeholder {
     color: aliceblue;
     font-size: 13px;
 }
 
-input:focus {
+.top-bar-container input:focus {
     outline: none;
 }
 

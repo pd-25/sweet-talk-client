@@ -42,7 +42,7 @@ const CreateWs = () => {
                                 <p>XYZ gives your team a home — a place where they can talk and work together. To create a
                                     new workspace, click the button below.</p>
                             </div>
-                            <div className="btn11 rounded gr">
+                            <div className="btn11 rounded gr" style={{padding:'4px'}}>
                                 <Link to="/step1" className="btn btn-c text-white">Create a Workspace</Link>
                             </div>
                             <div className="desc-3">

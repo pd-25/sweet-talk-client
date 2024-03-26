@@ -227,6 +227,14 @@ i {
     color: rgb(136, 136, 136);
 }
 
+.diff-email:hover {
+    text-decoration: underline;
+    color : sol;
+}
+.diff-email i{
+    color: #e2062e !important;
+}
+
 /* new  */
 .btn span i {
     font-size: 1.2rem !important;

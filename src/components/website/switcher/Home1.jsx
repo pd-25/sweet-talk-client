@@ -1,9 +1,9 @@
 // import React from 'react'
 import {  Link } from 'react-router-dom'
 import banner1 from '../../../assets/banner-1.png'
-import cd1 from '../../../assets/cd1.jpg'
-import cd2 from '../../../assets/cd2.jpg'
-import cd3 from '../../../assets/cd3.jpg'
+import cd1 from '../../../assets/cd11.svg'
+import cd2 from '../../../assets/cd22.svg'
+import cd3 from '../../../assets/cd33.svg'
 import './Home1.scss';
 
 const Home1 = () => {
@@ -77,15 +77,14 @@ const Home1 = () => {
         </div>
 
 
-        <div className="section2 section2-main">
+        <div className="section2 section2-main" style={{paddingBottom:'270px', paddingTop:'45px'}}>
             <div className="sec2-sub1 d-flex gap-3">
                 <h2>How it works?</h2>
                 <h3>Easy as ABC!</h3>
             </div>
             <div className="sec2-sub2 d-flex gap-3">
-                <p className="sol">Not seeing your workspace?</p>
-                <p className="sol">Try using a different email address <i
-                        className="fa-solid fa-arrow-right sol"></i></p>
+                <p className="sol" style={{color:'#e2062e'}}>Not seeing your workspace?</p>
+                <Link to='/signin'><p className="diff-email" style={{color:'#e2062e'}}>Try using a different email address <i className="fa-solid fa-arrow-right"></i></p></Link>
             </div>
         </div>
 

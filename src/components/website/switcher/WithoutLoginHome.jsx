@@ -4,9 +4,9 @@ import banner1 from '../../../assets/banner-1.png'
 import cd1 from '../../../assets/cd11.svg'
 import cd2 from '../../../assets/cd22.svg'
 import cd3 from '../../../assets/cd33.svg'
-import './Home1.scss';
+import './WithoutLoginHome.scss';
 
-const Home1 = () => {
+const WithoutLoginHome = () => {
   return (
     <div className='container-1'>
               <div className="body-container pt-5">
@@ -142,4 +142,4 @@ const Home1 = () => {
   )
 }
 
-export default Home1
+export default WithoutLoginHome

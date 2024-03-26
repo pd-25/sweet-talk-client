@@ -1,5 +1,5 @@
 // import React from 'react'
-import '../mainApp/MainApp.scss';
+import '../mainapp/MainApp.scss';
 
 const LeftSection = () => {
     return (

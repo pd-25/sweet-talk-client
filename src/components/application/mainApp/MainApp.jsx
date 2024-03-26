@@ -2,9 +2,9 @@
 import './MainApp.scss';
 import Topbar from '../topbar/Topbar';
 import Sidebar from '../sidebar/Sidebar';
-import LeftSection from '../leftSection/LeftSection';
-import RightSection from '../rightSection/RightSection';
-import BootomNavbar from '../bottomNavbar/BootomNavbar';
+import LeftSection from '../leftsection/LeftSection';
+import RightSection from '../rightsection/RightSection';
+import BootomNavbar from '../bottomnavbar/BootomNavbar';
 
 const MainApp = () => {
     return (

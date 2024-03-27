@@ -1,17 +1,57 @@
+// Defining minins---------------------------->
+@mixin tablet-Step1 {
+    @media (max-width: 660px) {
+        @content;
+    }
+}
+
+@mixin mobile-Step1 {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin extra-small-mobile-Step1 {
+    @media (max-width: 377px) {
+        @content;
+    }
+}
+
+
+
+
+
+
 .mid-section {
     display: grid;
     grid-template-columns: 1fr 2fr 8fr;
     margin-top: 2.4%;
+    @include tablet-Step1{
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+    }
+
+    @include extra-small-mobile-Step1{
+        display: block;
+        margin-top: 25%;
+    }
 }
 
 .mid-left-section-101 {
     overflow: hidden !important;
     max-height: 100vh;
+    @include tablet-Step1{
+        display: none;
+    }
 }
-.right-side{
+
+.right-side {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include extra-small-mobile-Step1{
+        border: none !important;
+    }
 }
 
 .r-s-main-inner-111 {
@@ -28,6 +68,22 @@
     font-size: 3.5rem;
     line-height: 55px;
     padding-bottom: 4%;
+
+    @include tablet-Step1 {
+        font-size: 2.8rem;
+        line-height: 42px;
+    }
+    @include mobile-Step1 {
+        font-size: 2.1rem;
+        line-height: 42px;
+        padding-bottom: 2%;
+    }
+
+    @include extra-small-mobile-Step1{
+        font-size: 1.7rem;
+        line-height: 30px;
+        padding-bottom: 2%;
+    }
 }
 
 .right-inner-side-111 .inp-1 {
@@ -45,71 +101,113 @@
     opacity: 0.6;
     font-size: 1.1rem;
 }
+
 .steps {
     opacity: 0.7;
 }
-.checks{
+
+.checks {
     margin-top: 2%;
 }
-.btn-111{
+
+.btn-111 {
     width: 100%;
     margin-top: 2%;
     padding: 0;
     padding: 4px;
 }
-.btn-111 a{
+
+.btn-111 a {
     width: 100%;
     font-weight: 600;
     color: white;
 }
-.btn-111 a:hover{
+
+.btn-111 a:hover {
     color: white;
 }
 
-/* Responsive */
-@media (max-width:660px) {
-    .right-inner-side-111 h1{
-        font-size: 2.8rem;
-        line-height: 42px;
-    }
-    .mid-left-section-101{
-        display: none;
-    }
-    .mid-section{
-        display: grid;
-        grid-template-columns: 1fr 10fr;
-    }
-    .inner-sidebar ul{
+
+// new
+
+.inner-sidebar ul{
+    @include tablet-Step1{
         margin-top: 99%;
     }
 }
-@media (max-width:500px) {
-    .right-inner-side-111 h1{
-        font-size: 2.1rem;
-        line-height: 42px;
-        padding-bottom: 2%;
+
+.right-inner-side-111 .r-desc p{
+    @include mobile-Step1{
+        font-size:  13px;
     }
-    .right-inner-side-111 .r-desc p{
+
+    @include extra-small-mobile-Step1{
         font-size:  13px;
     }
 }
-@media (max-width:377px) {
-    .right-inner-side-111 h1{
-        font-size: 1.7rem;
-        line-height: 30px;
-        padding-bottom: 2%;
-    }
-    .right-inner-side-111 .r-desc p{
-        font-size:  13px;
-    }
-    .mid-sidebar-section-1{
+.mid-sidebar-section-1{
+    @include extra-small-mobile-Step1{
         display: none;
     }
-    .mid-section{
-        display: block;
-        margin-top: 25%;
-    }
-    .right-side{
-        border: none;
-    }
 }
+
+// new end
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+// @media (max-width:660px) {
+//     .right-inner-side-111 h1{
+//         font-size: 2.8rem;
+//         line-height: 42px;
+//     }
+//     .mid-left-section-101{
+//         display: none;
+//     }
+//     .mid-section{
+//         display: grid;
+//         grid-template-columns: 1fr 10fr;
+//     }
+//     .inner-sidebar ul{
+//         margin-top: 99%;
+//     }
+// }
+// @media (max-width:500px) {
+//     .right-inner-side-111 h1{
+//         font-size: 2.1rem;
+//         line-height: 42px;
+//         padding-bottom: 2%;
+//     }
+//     .right-inner-side-111 .r-desc p{
+//         font-size:  13px;
+//     }
+// }
+// @media (max-width:377px) {
+//     .right-inner-side-111 h1{
+//         font-size: 1.7rem;
+//         line-height: 30px;
+//         padding-bottom: 2%;
+//     }
+//     .right-inner-side-111 .r-desc p{
+//         font-size:  13px;
+//     }
+//     .mid-sidebar-section-1{
+//         display: none;
+//     }
+//     .mid-section{
+//         display: block;
+//         margin-top: 25%;
+//     }
+//     .right-side{
+//         border: none;
+//     }
+// }

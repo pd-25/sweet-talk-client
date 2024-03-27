@@ -39,6 +39,10 @@ function App() {
           path: '/',
           element: isLoggedIn ? <WithLoginHome /> : <WithoutLoginHome />,
         },
+        // {
+        //   path:'/log-home',
+        //   element: <WithLoginHome />,
+        // }
 
       ],
     },

@@ -181,10 +181,10 @@ const Step5 = () => {
 
 
         {/* <!-- right side start --> */}
-        <div className="mid-right-section-400">
+        <div className="mid-right-section-555">
           <div className="right-side">
-            <div className="r-s-main-inner-2">
-              <div className="right-inner-side-400">
+            <div className="r-s-main-inner-222">
+              <div className="right-inner-side-555">
                 <div className="steps">
                   <p>Step 5 of 5</p>
                 </div>
@@ -194,7 +194,9 @@ const Step5 = () => {
                 <div className="r-desc-1">
                   <p>Choose a plan to get started ~</p>
                 </div>
-                <div className="r-cads">
+
+
+                <div className="r-cads-12">
                   <div className="r-card-left">
 
                     <div className="r-c-top">

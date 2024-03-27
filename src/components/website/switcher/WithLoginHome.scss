@@ -1,3 +1,63 @@
+//defining mixins
+@import url('../../../css-config/mixins.scss');
+
+// Define mixins for media queries
+@mixin tablet {
+    @media (max-width: 1156px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (max-width: 990px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (max-width: 920px) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (max-width: 865px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 690px) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: 615px) {
+        @content;
+    }
+}
+
+@mixin extra-small-mobile {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin ultra-small-mobile {
+    @media (max-width: 435px) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
 .body-container-100 {
     padding-left: 5%;
     padding-right: 5%;
@@ -7,6 +67,17 @@
 
 .body-container-100 h1 {
     font-size: 60px;
+
+    @include small-mobile {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    @include extra-small-mobile {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 45px;
+    }
 }
 
 .section1-main-container {}
@@ -25,13 +96,30 @@
 .head-section1 {
     background-color: rgba(0, 0, 0, 0.372);
     height: 100%;
+
+    @include mobile {
+        text-align: center;
+    }
 }
 
 .head-section1 p {
     padding: 30px;
     font-weight: 600;
     font-size: 25px;
+
+    @include small-mobile {
+        font-size: 20px;
+    }
+
+    @include extra-small-mobile {
+        font-size: 17px;
+        padding: 15px;
+    }
+    @include ultra-small-mobile {
+        font-size: 15px;
+    }
 }
+
 
 .user {
     padding-bottom: 20px;
@@ -40,11 +128,25 @@
 .inner-user {
     line-height: 15px;
     padding-left: 10px;
+
+    @include extra-small-mobile {
+        padding-top: 3px;
+    }
 }
 
 .inner-user p {
     font-weight: 500;
     font-size: 18px;
+
+    @include extra-small-mobile {
+        font-size: 13px;
+    }
+}
+
+.inner-user p i {
+    @include extra-small-mobile {
+        font-size: 13px;
+    }
 }
 
 .btn {
@@ -79,6 +181,10 @@
     display: flex;
     gap: 20px;
     justify-content: space-between;
+
+    @include mobile {
+        display: block;
+    }
 }
 
 .user1 img {
@@ -89,12 +195,22 @@
     padding-top: 30px;
 }
 
+.bottom-section2 a {
+    @include mobile {
+        font-weight: 500;
+    }
+}
+
 .section2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 145px;
+
+    @include mobile-landscape {
+        padding-bottom: 30px;
+    }
 }
 
 .section2 .sec2-sub2 p,
@@ -102,18 +218,38 @@ i {
     font-size: 15px;
     color: #c4da1c;
     text-shadow: 1 0 1px black;
+
+    @include extra-small-mobile {
+        font-size: 13px;
+    }
+    @include ultra-small-mobile {
+        font-size: 10px;
+    }
 }
 
 .section3 {
     background: #ffffff;
     padding: 20px;
     height: 100%;
+
+    @include mobile-landscape {
+        height: 100%;
+    }
 }
 
 .section3 .sec-3-sub1 {
     display: flex;
     justify-content: space-evenly;
     height: 100%;
+
+    @include mobile-landscape {
+        display: flex;
+        gap: 10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 }
 
 .card {
@@ -123,7 +259,15 @@ i {
     margin-top: -13%;
     box-shadow: 0 0 15px black;
     cursor: pointer;
-    transition: all 100ms ease-in;
+    transition: all 220ms ease-in;
+
+    @include mobile-landscape {
+        padding: 20px;
+        height: fit-content;
+        width: 85%;
+        box-shadow: 0 0 15px black;
+        margin-top: 5%;
+    }
 }
 
 .card:hover {
@@ -140,6 +284,16 @@ i {
     font-weight: 600;
     font-size: 15px;
     padding-top: 10px;
+
+    @include mobile-landscape {
+        font-size: 30px;
+        padding-bottom: 10px;
+        font-weight: 600;
+    }
+
+    @include mobile {
+        font-size: 20px;
+    }
 }
 
 .sub-small {
@@ -147,12 +301,27 @@ i {
     font-size: 13px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @include mobile-landscape {
+        font-size: 25px;
+        padding-bottom: 20px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+    }
 }
 
 .sec3-desc {
     color: rgb(33, 33, 117);
     font-weight: 500;
     line-height: 25px;
+
+    @include mobile-landscape {
+        font-size: 45px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
 }
 
 .footer-top-main {
@@ -164,10 +333,39 @@ i {
 .icons{
     width: 100%;
 } */
+.footer-top-main .icons {
+    @include mobile {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @include small-mobile {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @include extra-small-mobile {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
 .footer-top-main .icons a {
     float: right;
     padding-right: 25px;
     font-weight: 600;
+
+    @include mobile {
+        padding-right: 0;
+    }
+
+    @include small-mobile {
+        padding-right: 0;
+    }
+
+    @include extra-small-mobile{
+        padding-right: 0;
+    }
 }
 
 .footer-top-main .icons a i {
@@ -184,6 +382,15 @@ i {
 .footer-sub-main {
     display: flex;
     justify-content: space-evenly;
+
+    @include tablet-portrait {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include extra-small-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .footer-sub-main h4 {
@@ -204,6 +411,17 @@ i {
 .footer-bottom-main {
     display: flex;
     justify-content: space-between;
+
+    @include mobile-landscape {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.footer-bottom-subsec1 {
+    @include mobile-landscape {
+        display: block;
+    }
 }
 
 .footer-bottom-subsec1 a {
@@ -217,244 +435,352 @@ i {
 
 .footer-bootom-subsec2 p {
     color: rgb(136, 136, 136);
-}
 
-/* responsive */
-@media (max-width:920px) {
-    .footer-sub-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .footer-sub-main .footer-subsec {
-        padding-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width:865px) {
-    .left-mid-subsec {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section3 {
-        height: 100%;
-    }
-
-    .section3 .sec-3-sub1 {
-        display: flex;
-        gap: 10%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-
-    .card {
-        padding: 20px;
-        height: fit-content;
-        width: 85%;
-        box-shadow: 0 0 15px black;
-        margin-top: 5%;
-    }
-
-    .small {
-        font-size: 30px;
-        padding-bottom: 10px;
-        font-weight: 600;
-    }
-
-    .sec3-desc {
-        font-size: 45px;
-        font-weight: 600;
-        padding-bottom: 10px;
-    }
-
-    .sub-small {
-        font-size: 25px;
-        padding-bottom: 20px;
-    }
-
-    .section2 {
-        padding-bottom: 30px;
-    }
-
-    .mid-section1 {
-        display: block !important;
-    }
-
-    .footer-bottom-subsec1 {
-        display: block !important;
-    }
-
-    .footer-bottom-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-bootom-subsec2 p {
+    @include mobile-landscape {
         text-align: end;
     }
 }
 
-@media (max-width:690px) {
-    .card .decs-con h3 {
+
+// new
+
+.footer-sub-main .footer-subsec {
+    @include tablet-portrait {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.left-mid-subsec {
+    @include mobile-landscape {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.mid-section1 {
+    @include mobile-landscape {
+        display: block !important;
+    }
+}
+
+.card .decs-con h3 {
+    @include mobile {
         font-size: 35px;
     }
-
-    .card .decs-con .small {
-        font-size: 20px;
-    }
-
-    .card .decs-con .sub-small {
-        font-size: 20px;
-    }
-
-    .bottom-section2 a {
-        font-weight: 500;
-    }
-
-    .user1 {
-        display: block;
-    }
-
-    .right-mid-subsec p {
-        font-size: 17px;
-        text-align: center;
-    }
-
-    .left-mid-subsec img {
-        padding-bottom: 20px;
-    }
-
-    .head-section1 {
-        text-align: center;
-    }
-
-    .footer-top-main .icons {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .footer-top-main .icons a {
-        padding-right: 0;
-    }
-}
-
-@media (max-width:615px) {
-    .head-section1 p {
-        font-size: 20px;
-    }
-
-    .body-container-100 h1 {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-
-    .bottom-section2 {
-        padding-top: 5px;
-    }
-
-    .footer-top-main .icons {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .footer-top-main .icons a {
-        padding-right: 0;
-    }
-}
-
-@media (max-width:500px) {
-    .head-section1 p {
-        font-size: 17px;
-        padding: 15px;
-    }
-
-    .body-container-100 h1 {
-        text-align: center;
-        padding-bottom: 10px;
-        font-size: 45px;
-    }
-
-    .inner-user {
-        padding-top: 3px;
-    }
-
-    .inner-user p,
-    .inner-user p i {
+    @include ultra-small-mobile {
         font-size: 13px;
     }
+}
 
-    .inner-user .user-sub-name {
+.right-mid-subsec p {
+    @include mobile {
+        font-size: 17px;
+        text-align: center;
+    }
+}
+
+.left-mid-subsec img {
+    @include mobile {
+        padding-bottom: 20px;
+    }
+}
+
+.bottom-section2 {
+    @include small-mobile {
+        padding-top: 5px;
+    }
+}
+
+.inner-user .user-sub-name {
+    @include extra-small-mobile {
         font-size: 15px;
     }
+}
 
-    .sec2-sub1 h2,
-    .sec2-sub1 h3 {
+.sec2-sub1 h2,
+.sec2-sub1 h3 {
+    @include extra-small-mobile {
         font-size: 20px;
     }
-
-    .sec2-sub2 p {
-        font-size: 13px !important;
-    }
-
-    .footer-sub-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-top-main .icons {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .footer-top-main .icons a {
-        padding-right: 0;
-    }
-
-    .footer-bottom-subsec1 p,
-    .footer-bootom-subsec2 p {
+}
+.footer-bottom-subsec1 p, .footer-bootom-subsec2 p {
+    @include extra-small-mobile {
         font-size: 10px;
     }
 }
-
-@media (max-width:435px) {
-    .head-section1 p {
-        font-size: 15px;
+.card .but-1{
+    @include ultra-small-mobile{
+        height: 50px; 
     }
-
-    .sec2-sub2 p {
-        font-size: 10px !important;
-    }
-
-    .card .decs-con h3 {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: -18px;
-        margin-top: -5px;
-    }
-
-    .card .decs-con .small {
-        font-size: 15px;
-    }
-
-    .card .decs-con .sub-small {
-        font-size: 13px;
-    }
-
-    .card .but-1 {
-        height: 50px;
-    }
-
-    .card button {
+}
+.card button{
+    @include ultra-small-mobile{
         height: auto;
         padding: 0;
         margin: 0;
         margin-top: -6px;
     }
 }
+// new end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+// @media (max-width:920px) {
+//     .footer-sub-main {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr;
+//     }
+
+//     .footer-sub-main .footer-subsec {
+//         padding-bottom: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+// }
+
+// @media (max-width:865px) {
+//     .left-mid-subsec {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     .section3 {
+//         height: 100%;
+//     }
+
+//     .section3 .sec-3-sub1 {
+//         display: flex;
+//         gap: 10%;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         height: 100%;
+//     }
+
+//     .card {
+//         padding: 20px;
+//         height: fit-content;
+//         width: 85%;
+//         box-shadow: 0 0 15px black;
+//         margin-top: 5%;
+//     }
+
+//     .small {
+//         font-size: 30px;
+//         padding-bottom: 10px;
+//         font-weight: 600;
+//     }
+
+//     .sec3-desc {
+//         font-size: 45px;
+//         font-weight: 600;
+//         padding-bottom: 10px;
+//     }
+
+//     .sub-small {
+//         font-size: 25px;
+//         padding-bottom: 20px;
+//     }
+
+//     .section2 {
+//         padding-bottom: 30px;
+//     }
+
+//     .mid-section1 {
+//         display: block !important;
+//     }
+
+//     .footer-bottom-subsec1 {
+//         display: block !important;
+//     }
+
+//     .footer-bottom-main {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//     }
+
+//     .footer-bootom-subsec2 p {
+//         text-align: end;
+//     }
+// }
+
+// @media (max-width:690px) {
+//     .card .decs-con h3 {
+//         font-size: 35px;
+//     }
+
+//     .card .decs-con .small {
+//         font-size: 20px;
+//     }
+
+//     .card .decs-con .sub-small {
+//         font-size: 20px;
+//     }
+
+//     .bottom-section2 a {
+//         font-weight: 500;
+//     }
+
+//     .user1 {
+//         display: block;
+//     }
+
+//     .right-mid-subsec p {
+//         font-size: 17px;
+//         text-align: center;
+//     }
+
+//     .left-mid-subsec img {
+//         padding-bottom: 20px;
+//     }
+
+//     .head-section1 {
+//         text-align: center;
+//     }
+
+//     .footer-top-main .icons {
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     .footer-top-main .icons a {
+//         padding-right: 0;
+//     }
+// }
+
+// @media (max-width:615px) {
+//     .head-section1 p {
+//         font-size: 20px;
+//     }
+
+//     .body-container-100 h1 {
+//         text-align: center;
+//         padding-bottom: 10px;
+//     }
+
+//     .bottom-section2 {
+//         padding-top: 5px;
+//     }
+
+//     .footer-top-main .icons {
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     .footer-top-main .icons a {
+//         padding-right: 0;
+//     }
+// }
+
+// @media (max-width:500px) {
+//     .head-section1 p {
+//         font-size: 17px;
+//         padding: 15px;
+//     }
+
+//     .body-container-100 h1 {
+//         text-align: center;
+//         padding-bottom: 10px;
+//         font-size: 45px;
+//     }
+
+//     .inner-user {
+//         padding-top: 3px;
+//     }
+
+//     .inner-user p,
+//     .inner-user p i {
+//         font-size: 13px;
+//     }
+
+//     .inner-user .user-sub-name {
+//         font-size: 15px;
+//     }
+
+//     .sec2-sub1 h2,
+//     .sec2-sub1 h3 {
+//         font-size: 20px;
+//     }
+
+//     .sec2-sub2 p {
+//         font-size: 13px !important;
+//     }
+
+//     .footer-sub-main {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//     }
+
+//     .footer-top-main .icons {
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     .footer-top-main .icons a {
+//         padding-right: 0;
+//     }
+
+//     .footer-bottom-subsec1 p,
+//     .footer-bootom-subsec2 p {
+//         font-size: 10px;
+//     }
+// }
+
+// @media (max-width:435px) {
+//     .head-section1 p {
+//         font-size: 15px;
+//     }
+
+//     .sec2-sub2 p {
+//         font-size: 10px !important;
+//     }
+
+//     .card .decs-con h3 {
+//         font-size: 20px;
+//         font-weight: 600;
+//         margin-bottom: -18px;
+//         margin-top: -5px;
+//     }
+
+//     .card .decs-con .small {
+//         font-size: 15px;
+//     }
+
+//     .card .decs-con .sub-small {
+//         font-size: 13px;
+//     }
+
+//     .card .but-1 {
+//         height: 50px;
+//     }
+
+//     .card button {
+//         height: auto;
+//         padding: 0;
+//         margin: 0;
+//         margin-top: -6px;
+//     }
+// }

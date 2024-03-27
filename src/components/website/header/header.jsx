@@ -1,4 +1,5 @@
 // import React from "react";
+import {  NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -73,7 +74,7 @@ const Header = () => {
                     </ul>
                     <form className="d-flex gap-4">
                         <a className="btn btn-nav gr text-white" type="button">Talk to Us</a>
-                        <a className="btn btn-nav gr  text-white" type="button">Create New Workspace</a>
+                        <NavLink to='/create-workspace' className="btn btn-nav gr  text-white" type="button">Create New Workspace</NavLink>
                     </form>
                 </div>
             </div>

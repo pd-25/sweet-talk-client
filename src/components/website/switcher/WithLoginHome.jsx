@@ -1,5 +1,10 @@
 // import React from 'react'
+import {  Link } from 'react-router-dom'
 import './WithLoginHome.scss';
+import h2 from '../../../assets/h2.svg'
+import cd1 from '../../../assets/cd11.svg'
+import cd2 from '../../../assets/cd22.svg'
+import cd3 from '../../../assets/cd33.svg'
 
 const WithLoginHome = () => {
     return (
@@ -11,7 +16,7 @@ const WithLoginHome = () => {
                 <div className="section1-main-container">
                     <div className="section1">
                         <div className="head-section1">
-                            <p>Workspaces htmlFor animallo5333@gmail.com</p>
+                            <p>Workspaces For animallo5333@gmail.com</p>
                         </div>
 
                         <div className="doen-section1">
@@ -51,7 +56,7 @@ const WithLoginHome = () => {
                                 </div>
                             </div>
                             <div className="bottom-section1">
-                                <a className="btn gr cw" style={{ width: "100%" }}>Launch Workspace</a>
+                                <Link to='/app' className="btn gr cw" style={{ width: "100%" }}>Launch Workspace</Link>
                             </div>
                         </div>
 
@@ -68,7 +73,7 @@ const WithLoginHome = () => {
                                 <div className="user1">
 
                                     <div className="left-mid-subsec">
-                                        <img src="./assets/img/4884785-removebg-preview.png" alt="#" />
+                                        <img src={h2} alt="#" />
                                     </div>
                                     <div className="right-mid-subsec">
                                         <p>Lorem ips Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis,
@@ -76,11 +81,11 @@ const WithLoginHome = () => {
                                             quaerat rerum nemo itaque odio mollitia minima ut voluptas minus. um dolor sit
                                             amet,
                                             consectetur adipisicing elit. A in harum asperiores nemo magni illo cupiditate
-                                            reprehenderit, voluptas accusamus. Quasi.</p>
+                                            reprehenderit, voluptas accusamus. Quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore soluta error, maiores praesentium voluptatem minima ullam, illo, fugit ea repellat rem non! Nam voluptatum quo at quisquam harum vel explicabo ratione error est dicta consectetur quibusdam similique numquam, excepturi impedit sint placeat facere. Nulla consequatur consectetur a. Accusamus mollitia iusto modi, perspiciatis esse ducimus voluptatem commodi aspernatur ullam libero ea nostrum enim inventore sequi quae rerum quia optio error dignissimos! Odio dolore omnis repudiandae harum porro veritatis, ab debitis nobis soluta atque laboriosam similique iste mollitia veniam ut. Facere natus a hic est excepturi totam aspernatur nulla molestiae, quisquam voluptate? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste magnam nemo laudantium ad, odio fuga quasi voluptatibus expedita beatae? Ducimus.</p>
                                         <br />
                                         <div className="bottom-section2">
-                                            <a href="create-new-ws.html" className="btn gr cw" style={{ width: "100%" }}>Create
-                                                New Workspace</a>
+                                            <Link to="/step1" className="btn gr cw" style={{ width: "100%" }}>Create
+                                                New Workspace</Link>
                                         </div>
                                     </div>
 
@@ -106,9 +111,57 @@ const WithLoginHome = () => {
                 </div>
 
 
-
+                
             </div>
+            <div className="section3 mt-2">
+            <div className="sec-3-sub1">
+                <div className="card">
+                    <div className="img">
+                        <img src={cd1} alt="dsd" width="100%"/>
+                    </div>
+                    <div className="decs-con">
+                        <p className="small">Training</p>
+                        <h3 className="sec3-desc">Start Your Journey Today</h3>
+                        <p className="sub-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure deleniti
+                            natus consequuntur voluptatibus, beatae sequi praesentium at incidunt? Aliquam, sunt.</p>
+                    </div>
+                    <div className="btn but-1 gr">
+                        <button className="btn">Get Started</button>
+                    </div>
+                </div>
 
+                <div className="card">
+                    <div className="img">
+                        <img src={cd2} alt="dsd" width="100%"/>
+                    </div>
+                    <div className="decs-con">
+                        <p className="small">Training</p>
+                        <h3 className="sec3-desc">Start Your Journey Today</h3>
+                        <p className="sub-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure deleniti
+                            natus consequuntur voluptatibus, beatae sequi praesentium at incidunt? Aliquam, sunt.</p>
+                    </div>
+                    <div className="btn but-1 gr">
+                        <button className="btn">Get Started</button>
+                    </div>
+                </div>
+
+                <div className="card">
+                    <div className="img">
+                        <img src={cd3} alt="dsd" width="100%"/>
+                    </div>
+                    <div className="decs-con">
+                        <p className="small">Training</p>
+                        <h3 className="sec3-desc">Start Your Journey Today</h3>
+                        <p className="sub-small">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure deleniti
+                            natus consequuntur voluptatibus, beatae sequi praesentium at incidunt? Aliquam, sunt.</p>
+                    </div>
+                    <div className="btn but-1 gr">
+                        <button className="btn">Get Started</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
         </div>
     )
 }

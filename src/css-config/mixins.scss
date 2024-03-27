@@ -1,29 +1,130 @@
-@mixin sm {
-    @media only screen and (min-width: 640px) {
-        @content;
-    }
-}
+// @mixin sm {
+//     @media only screen and (min-width: 640px) {
+//         @content;
+//     }
+// }
 
-@mixin md {
-    @media only screen and (min-width: 768px) {
-        @content;
-    }
-}
+// @mixin md {
+//     @media only screen and (min-width: 768px) {
+//         @content;
+//     }
+// }
 
-@mixin lg {
-    @media only screen and (min-width: 1024px) {
-        @content;
-    }
-}
+// @mixin lg {
+//     @media only screen and (min-width: 1024px) {
+//         @content;
+//     }
+// }
 
-@mixin xl {
-    @media only screen and (min-width: 1280px) {
-        @content;
-    }
-}
+// @mixin xl {
+//     @media only screen and (min-width: 1280px) {
+//         @content;
+//     }
+// }
 
-@mixin xxl {
-    @media only screen and (min-width: 1536px) {
-        @content;
+// @mixin xxl {
+//     @media only screen and (min-width: 1536px) {
+//         @content;
+//     }
+// }
+
+
+
+// @mixin sm {
+//     @media only screen and (max-width: 1156px) {
+//         @content;
+//     }
+// }
+
+// @mixin md {
+//     @media only screen and (max-width: 990px) {
+//         @content;
+//     }
+// }
+
+// @mixin lg {
+//     @media only screen and (max-width: 920px) {
+//         @content;
+//     }
+// }
+
+// @mixin xl {
+//     @media only screen and (max-width: 865px) {
+//         @content;
+//     }
+// }
+
+// @mixin xxl {
+//     @media only screen and (max-width: 690px) {
+//         @content;
+//     }
+// }
+
+// @mixin xxxl {
+//     @media only screen and (max-width: 615px) {
+//         @content;
+//     }
+// }
+
+// @mixin xxxxl {
+//     @media only screen and (max-width: 500px) {
+//         @content;
+//     }
+// }
+
+// @mixin xxxxxl {
+//     @media only screen and (max-width: 435px) {
+//         @content;
+//     }
+// }
+
+
+
+// Define mixins for media queries
+@mixin tablet {
+    @media (max-width: 1156px) {
+      @content;
     }
-}
+  }
+  
+  @mixin laptop {
+    @media (max-width: 990px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-portrait {
+    @media (max-width: 920px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-landscape {
+    @media (max-width: 865px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media (max-width: 690px) {
+      @content;
+    }
+  }
+  
+  @mixin small-mobile {
+    @media (max-width: 615px) {
+      @content;
+    }
+  }
+  
+  @mixin extra-small-mobile {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+  
+  @mixin ultra-small-mobile {
+    @media (max-width: 435px) {
+      @content;
+    }
+  }

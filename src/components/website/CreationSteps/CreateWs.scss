@@ -1,3 +1,27 @@
+
+// Define mixins for media queries
+@mixin tablet-CreateWS {
+    @media (max-width: 1110px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-CreateWS {
+    @media (max-width: 490px) {
+      @content;
+    }
+  }
+  
+  @mixin small-mobile-CreateWS {
+    @media (max-width: 356px) {
+      @content;
+    }
+  }
+
+
+
+
+
 .c-container-main {
     padding: 1%;
     display: flex;
@@ -11,6 +35,15 @@
     display: flex;
     justify-content: center;
     padding-bottom: 20px;
+}
+.email-inner{
+    @include small-mobile-CreateWS{
+        padding: 0;
+        padding-left: 7%;
+        padding-right: 7%;
+        border-radius: 5px;
+        background: transparent;
+    }
 }
 
 .email-inner p{
@@ -38,6 +71,10 @@
     align-items: center;
     text-align: center;
     margin-top: 2%;
+    @include tablet-CreateWS{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .right-mid-sub {
@@ -46,6 +83,12 @@
     align-items: center;
     text-align: center;
     width: 50%;
+
+    @include tablet-CreateWS{
+        margin-top: 10%;
+        width: 100%;
+        padding: 3%;
+    }
 }
 
 .mid-main-sec img {
@@ -65,12 +108,19 @@
 .right-sub h1 {
     font-size: 3rem;
     padding-bottom: 5px;
+    @include mobile-CreateWS{
+        font-size: 2.1rem;
+    }
 }
 
 .right-sub p {
     font-size: 15px;
     list-style: none;
     line-height: 25px;
+
+    @include mobile-CreateWS{
+        font-size: 13px;
+    }
 }
 
 .desc-3 {
@@ -89,72 +139,125 @@
 
 .tndImg {
     display: none;
+    @include tablet-CreateWS{
+        display: block;
+    }
 }
 
 .btn-c:focus {
     outline: none;
 }
 
-/* responsive */
-@media (max-width:1110px) {
 
-    .mid-main-sec {
-        display: flex;
-        flex-direction: column;
-    }
+// new
 
-    .tndImg {
-        display: block;
-    }
-
-    .back-img2 {
+.back-img2{
+    @include tablet-CreateWS{
         border-radius: 100px 130px 130px 30px;
         border-radius: 130px 100px 30px 130px;
     }
-
-    .imgages-1 {
+}
+.imgages-1{
+    @include tablet-CreateWS{
         display: flex;
         justify-content: space-around;
         align-items: center;
         background-color: #131618;
         width: 100%;
     }
+}
 
-    .imgages-1 .bk-img {
+.imgages-1 .bk-img{
+    @include tablet-CreateWS{
         margin-top: -5%;
     }
+}
 
-    .top-email-sec {
+.top-email-sec{
+    @include tablet-CreateWS{
         padding-bottom: 8%;
     }
 
-    .right-mid-sub {
-        margin-top: 10%;
-        width: 100%;
-        padding: 3%;
-    }
-}
-
-@media (max-width:490px) {
-    .right-sub p {
-        font-size: 13px;
-    }
-
-    .right-sub h1 {
-        font-size: 2.1rem;
-    }
-}
-
-@media (max-width:356px) {
-    .top-email-sec {
+    @include small-mobile-CreateWS{
         font-size: 12px;
     }
-
-    .email-inner {
-        padding: 0;
-        padding-left: 7%;
-        padding-right: 7%;
-        border-radius: 5px;
-        background: transparent;
-    }
 }
+
+// new end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+// @media (max-width:1110px) {
+
+//     .mid-main-sec {
+//         display: flex;
+//         flex-direction: column;
+//     }
+
+//     .tndImg {
+//         display: block;
+//     }
+
+//     .back-img2 {
+//         border-radius: 100px 130px 130px 30px;
+//         border-radius: 130px 100px 30px 130px;
+//     }
+
+//     .imgages-1 {
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//         background-color: #131618;
+//         width: 100%;
+//     }
+
+//     .imgages-1 .bk-img {
+//         margin-top: -5%;
+//     }
+
+//     .top-email-sec {
+//         padding-bottom: 8%;
+//     }
+
+//     .right-mid-sub {
+//         margin-top: 10%;
+//         width: 100%;
+//         padding: 3%;
+//     }
+// }
+
+// @media (max-width:490px) {
+//     .right-sub p {
+//         font-size: 13px;
+//     }
+
+//     .right-sub h1 {
+//         font-size: 2.1rem;
+//     }
+// }
+
+// @media (max-width:356px) {
+//     .top-email-sec {
+//         font-size: 12px;
+//     }
+
+//     .email-inner {
+//         padding: 0;
+//         padding-left: 7%;
+//         padding-right: 7%;
+//         border-radius: 5px;
+//         background: transparent;
+//     }
+// }

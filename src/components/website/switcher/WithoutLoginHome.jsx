@@ -77,7 +77,7 @@ const WithoutLoginHome = () => {
         </div>
 
 
-        <div className="section2 section2-main" style={{paddingBottom:'270px', paddingTop:'45px'}}>
+        <div className="section2 section2-main">
             <div className="sec2-sub1 d-flex gap-3">
                 <h2>How it works?</h2>
                 <h3>Easy as ABC!</h3>

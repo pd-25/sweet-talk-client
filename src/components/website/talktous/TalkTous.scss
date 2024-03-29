@@ -1,0 +1,1169 @@
+//Definig mixins ------------------------------------------------->
+
+@mixin tablet-TalkToUs {
+    @media (max-width: 1450px) {
+        @content;
+    }
+}
+
+@mixin desktop-TalkToUs {
+    @media (max-width: 1169px) {
+        @content;
+    }
+}
+
+@mixin laptop-TalkToUs {
+    @media (max-width: 1088px) {
+        @content;
+    }
+}
+
+@mixin laptop-sm-TalkToUs {
+    @media (max-width: 932px) {
+        @content;
+    }
+}
+
+@mixin tablet-sm-TalkToUs {
+    @media (max-width: 639px) {
+        @content;
+    }
+}
+
+@mixin mobile-l-TalkToUs {
+    @media (max-width: 412px) {
+        @content;
+    }
+}
+
+@mixin mobile-m-TalkToUs {
+    @media (max-width: 365px) {
+        @content;
+    }
+}
+
+
+
+
+* {
+    color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all 220ms ease-in;
+}
+
+.gr {
+    background: linear-gradient(to right, #e2062e, #0b5adb);
+}
+
+.sol {
+    color: #e2062e;
+}
+
+.sol-bg {
+    background: #e2062e;
+}
+
+.cw {
+    color: white;
+}
+
+
+
+
+
+
+/* css start */
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.t-container-main {
+    padding: 4%;
+    padding-top: 0;
+
+    @include laptop-TalkToUs {
+        padding: 8%;
+    }
+}
+
+.hide-text {
+    display: none;
+
+    @include laptop-TalkToUs {
+        display: flex;
+        padding-bottom: 8%;
+        font-weight: 700;
+        font-size: 3.5rem;
+    }
+
+    @include laptop-sm-TalkToUs {
+        font-size: 3rem;
+    }
+
+    @include tablet-sm-TalkToUs {
+        font-size: 2.6rem;
+    }
+    @include mobile-l-TalkToUs {
+        font-size: 2.3rem;
+    }
+    @include mobile-m-TalkToUs{
+        font-size: 2.2rem;
+    }
+}
+
+.show-btn-text {
+    display: none;
+
+    @include tablet-sm-TalkToUs {
+        display: block;
+    }
+    @include mobile-l-TalkToUs {
+        display: block;
+    }
+}
+
+.hide-btn-text {
+    @include tablet-sm-TalkToUs {
+        display: none;
+    }
+    @include mobile-l-TalkToUs {
+        display: none;
+    }
+}
+
+
+/* t-container-section-1 start */
+
+.t-container-section-1 {
+    width: 50%;
+    margin-top: 4%;
+
+    @include tablet-TalkToUs {
+        width: 50%;
+        margin-top: 4%;
+    }
+
+    @include desktop-TalkToUs {
+        width: 50%;
+        margin-top: 4%;
+    }
+
+    @include laptop-TalkToUs {
+        width: 100%;
+        margin-top: 4%;
+    }
+
+    .t-heading h1 {
+        font-size: 4rem;
+        font-weight: 700;
+
+        @include tablet-TalkToUs {
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        @include desktop-TalkToUs {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        @include laptop-TalkToUs {
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 3rem;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 2.6rem;
+        }
+
+        @include mobile-l-TalkToUs{
+            font-size: 2.3rem;
+        }
+        @include mobile-m-TalkToUs{
+            font-size: 2.2rem;
+        }
+    }
+
+    .t-desc p {
+        font-weight: 500;
+        font-size: 20px;
+
+        @include tablet-TalkToUs {
+            font-weight: 500;
+            font-size: 19px;
+            padding-bottom: 10px;
+        }
+
+        @include desktop-TalkToUs {
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        @include laptop-TalkToUs {
+            font-weight: 500;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 16px;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 12px;
+        }
+        @include mobile-l-TalkToUs{
+            font-size: 10px;
+        }
+        @include mobile-m-TalkToUs{
+            font-size: 9px;
+        }
+    }
+
+    .t-lists .accordion .accordion-item {
+        background: #16181a88;
+        border-radius: 10px;
+
+        @include tablet-TalkToUs {
+            background: #16181a88;
+            border-radius: 10px;
+        }
+
+        @include laptop-TalkToUs {
+            background: #16181a88;
+            border-radius: 10px;
+        }
+    }
+
+    .t-lists .accordion .accordion-button {
+        /* background: #ceced3; */
+        border-radius: 10px;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        font-size: 1rem;
+
+        @include tablet-TalkToUs {
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @include desktop-TalkToUs {
+            font-size: 0.8rem;
+        }
+
+        @include desktop-TalkToUs {
+            font-size: 1rem;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 14px;
+        }
+
+        @include mobile-l-TalkToUs{
+            font-size: 12px;
+        }
+    }
+
+    .accordion .accordion-item .accordion-collapse .accordion-body {
+        @include laptop-sm-TalkToUs {
+            font-size: 14px;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 14px;
+        }
+        @include mobile-l-TalkToUs{
+            font-size: 11px;
+        }
+    }
+
+}
+
+/* t-container-section-1 end */
+
+
+
+
+
+
+/* t-container-section-2 start */
+
+.t-container-section-2 .t-container-section-2-inner {
+    display: flex;
+    gap: 10%;
+    padding: 4%;
+
+    @include tablet-TalkToUs {
+        display: flex;
+        gap: 6%;
+        padding: 4%;
+    }
+
+    @include desktop-TalkToUs {
+        display: flex;
+        gap: 2%;
+    }
+
+    @include laptop-TalkToUs {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 8%;
+    }
+
+    .t-form {
+        width: 55%;
+        background: #16181a;
+        padding: 2%;
+        margin-top: -32%;
+        border-radius: 10px;
+        padding-top: 3%;
+
+        @include tablet-TalkToUs {
+            margin-top: -49%;
+            height: fit-content;
+            padding-bottom: 7% !important;
+        }
+
+        @include desktop-TalkToUs {
+            margin-top: -44%;
+            height: fit-content;
+            padding-bottom: 5%;
+        }
+
+        @include laptop-TalkToUs {
+            width: 100%;
+            background: #16181a;
+            padding: 5%;
+            margin-top: 0;
+            border-radius: 10px;
+        }
+        
+    }
+
+    .t-form:hover {
+        box-shadow: 0 0 10px black;
+        scale: 1.03;
+    }
+
+    .t-form label {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .t-form input {
+        padding: 2%;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border: none !important;
+
+        @include tablet-TalkToUs {
+            font-size: 0.8rem;
+            padding: 4%;
+        }
+
+        @include laptop-TalkToUs {
+            padding: 2.2%;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: none !important;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 1rem;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 0.85rem;
+        }
+        @include mobile-l-TalkToUs {
+            font-size: 0.75rem;
+        }
+    }
+
+    .t-form textarea {
+        padding: 2%;
+        font-size: 1.2rem;
+        border: none !important;
+
+        @include tablet-TalkToUs {
+            font-size: 0.8rem;
+            padding: 4%;
+        }
+
+        @include laptop-TalkToUs {
+            padding: 2.2%;
+            font-size: 1.2rem;
+            border: none !important;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 1rem;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 0.85rem;
+        }
+        @include mobile-l-TalkToUs {
+            font-size: 0.75rem;
+        }
+    }
+
+    .t-form textarea::placeholder {
+        font-weight: 500;
+    }
+
+    .t-form button {
+        padding: 12px;
+        font-weight: 500;
+        cursor: pointer;
+
+        @include laptop-TalkToUs {
+            padding: 12px;
+        }
+        @include mobile-l-TalkToUs {
+            padding: 8px;
+        }
+    }
+
+
+    .t-form button:hover {
+        color: white;
+        opacity: 0.8;
+    }
+
+    .t-form .t-privacy {
+        opacity: 0.7;
+
+        @include tablet-TalkToUs {
+            font-size: 0.8rem;
+        }
+
+        @include laptop-TalkToUs {
+            opacity: 0.7;
+        }
+
+        @include laptop-TalkToUs {
+            opacity: 0.7;
+            font-size: 10px;
+        }
+        @include mobile-l-TalkToUs {
+            font-size: 10px;
+        }
+    }
+
+    .t-form label,
+    .t-form .required-text {
+        @include laptop-TalkToUs {
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+.t-left-inner {
+    @include laptop-TalkToUs {
+        margin-top: 8%;
+    }
+
+    .t-sec2-heading h3 {
+        font-size: 3.5rem;
+        font-weight: 700;
+
+        @include desktop-TalkToUs {
+            font-size: 2.7rem;
+            font-weight: 700;
+        }
+
+        @include laptop-TalkToUs {
+            font-size: 3.5rem;
+            font-weight: 700;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        @include laptop-sm-TalkToUs {
+            font-size: 3rem;
+        }
+
+        @include tablet-sm-TalkToUs {
+            font-size: 2.6rem;
+        }
+        @include mobile-l-TalkToUs{
+            font-size: 2.3rem;
+        }
+        @include mobile-m-TalkToUs{
+            font-size: 2.2rem;
+            padding-bottom: 4%;
+        }
+        
+    }
+
+    .t-comments img {
+        width: 60px;
+
+        @include desktop-TalkToUs {
+            width: 50px;
+        }
+
+        @include laptop-TalkToUs {
+            width: 70px;
+        }
+
+        @include laptop-sm-TalkToUs {
+            width: 60px;
+        }
+        @include tablet-sm-TalkToUs{
+            width: 55px;
+        }
+        @include mobile-l-TalkToUs{
+            width: 50px;
+        }
+    }
+
+    .t-comments .comments-text {
+        .t-cmm {
+            font-weight: 500;
+            font-size: 1.1rem;
+
+            @include desktop-TalkToUs {
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            @include laptop-TalkToUs {
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+
+            @include laptop-sm-TalkToUs {
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+            @include tablet-sm-TalkToUs {
+                font-size: 0.8rem;
+            }
+            @include mobile-l-TalkToUs {
+                font-weight: 500;
+                font-size: 0.7rem;
+            }
+        }
+
+        .t-c-name {
+            font-size: 1.2rem;
+
+            @include desktop-TalkToUs {
+                font-size: 1rem;
+            }
+
+            @include laptop-TalkToUs {
+                font-size: 1.2rem;
+            }
+
+            @include laptop-sm-TalkToUs {
+                font-size: 1rem;
+            }
+
+            @include tablet-sm-TalkToUs {
+                font-size: 0.9rem;
+            }
+            @include mobile-l-TalkToUs {
+                font-size: 0.7rem;
+            }
+        }
+
+        .t-c-role {
+            margin-top: -1.9%;
+            font-weight: 500;
+            font-size: 15px;
+
+            @include desktop-TalkToUs {
+                margin-top: -1.9%;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            @include laptop-TalkToUs {
+                margin-top: -1.9%;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            @include laptop-sm-TalkToUs {
+                margin-top: -1.9%;
+                font-weight: 500;
+                font-size: 14px;
+            }
+
+            @include tablet-sm-TalkToUs {
+                margin-top: -1.9%;
+                font-weight: 500;
+                font-size: 13px;
+            }
+            @include mobile-l-TalkToUs {
+                margin-top: -1.9%;
+                font-weight: 500;
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+/* t-container-section-2 end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+// @media (max-width:1450px) {
+//     .t-container-section-1 {
+//         width: 50%;
+//         margin-top: 4%;
+
+//         .t-heading h1 {
+//             font-size: 4rem;
+//             font-weight: 700;
+//         }
+
+//         .t-desc p {
+//             font-weight: 500;
+//             font-size: 19px;
+//             padding-bottom: 10px;
+//         }
+
+//         .t-lists .accordion .accordion-item {
+//             background: #16181a88;
+//             border-radius: 10px;
+//         }
+
+//         .t-lists .accordion .accordion-button {
+//             /* background: #ceced3; */
+//             border-radius: 10px;
+//             color: rgb(255, 255, 255);
+//             font-weight: 600;
+//             font-size: 0.9rem;
+//         }
+
+//     }
+
+
+
+
+//     .t-container-section-2 .t-container-section-2-inner {
+//         display: flex;
+//         gap: 6%;
+//         padding: 4%;
+
+//         .t-form {
+//             margin-top: -49%;
+//             height: fit-content;
+//             padding-bottom: 7% !important;
+//         }
+
+//         .t-form input {
+//             font-size: 0.8rem;
+//             padding: 4%;
+//         }
+
+//         .t-form textarea {
+//             font-size: 0.8rem;
+//             padding: 4%;
+//         }
+
+//         .t-form button {
+//             padding: 12px;
+//         }
+
+//         .t-form .t-privacy {
+//             font-size: 0.8rem;
+//         }
+//     }
+// }
+
+// @media (max-width: 1169px) {
+//     .t-container-section-2 .t-container-section-2-inner {
+//         display: flex;
+//         gap: 2%;
+
+//         .t-form {
+//             margin-top: -44%;
+//             height: fit-content;
+//             padding-bottom: 5%;
+//         }
+//     }
+
+
+//     .t-container-section-1 {
+//         width: 50%;
+//         margin-top: 4%;
+
+//         .t-heading h1 {
+//             font-size: 3.5rem;
+//             font-weight: 700;
+//         }
+
+//         .t-desc p {
+//             font-weight: 500;
+//             font-size: 16px;
+//         }
+
+//         .t-lists .accordion .accordion-button {
+//             font-size: 0.8rem;
+//         }
+//     }
+
+
+//     .t-left-inner {
+
+//         .t-sec2-heading h3 {
+//             font-size: 2.7rem;
+//             font-weight: 700;
+//         }
+
+//         .t-comments img {
+//             width: 50px;
+//         }
+
+//         .t-comments .comments-text {
+//             .t-cmm {
+//                 font-weight: 500;
+//                 font-size: 0.9rem;
+//             }
+
+//             .t-c-name {
+//                 font-size: 1rem;
+//             }
+
+//             .t-c-role {
+//                 margin-top: -1.9%;
+//                 font-weight: 500;
+//                 font-size: 14px;
+//             }
+
+//         }
+
+//     }
+// }
+
+
+// @media (max-width: 1088px) {
+
+//     .t-container-main {
+//         padding: 8%;
+//     }
+
+//     .hide-text {
+//         display: flex;
+//         padding-bottom: 8%;
+//         font-weight: 700;
+//         font-size: 3.5rem;
+//     }
+
+//     .t-container-section-1 {
+//         width: 100%;
+//         margin-top: 4%;
+
+//         .t-heading h1 {
+//             font-size: 4rem;
+//             font-weight: 700;
+//             text-align: center;
+//         }
+
+//         .t-desc p {
+//             font-weight: 500;
+//             font-size: 20px;
+//             text-align: center;
+//         }
+
+//         .t-lists .accordion .accordion-item {
+//             background: #16181a88;
+//             border-radius: 10px;
+//         }
+
+//         .t-lists .accordion .accordion-button {
+//             /* background: #ceced3; */
+//             border-radius: 10px;
+//             color: rgb(255, 255, 255);
+//             font-weight: 600;
+//             font-size: 1rem;
+//         }
+//     }
+
+
+
+
+//     .t-container-section-2 .t-container-section-2-inner {
+//         display: flex;
+//         flex-direction: column-reverse;
+//         padding: 8%;
+
+//         .t-form {
+//             width: 100%;
+//             background: #16181a;
+//             padding: 5%;
+//             margin-top: 0;
+//             border-radius: 10px;
+//         }
+
+//         .t-form:hover {
+//             box-shadow: 0 0 10px black;
+//             scale: 1.04;
+//         }
+
+//         .t-form label {
+//             font-size: 1rem;
+//             font-weight: 500;
+//         }
+
+//         .t-form input {
+//             padding: 2.2%;
+//             font-size: 1.1rem;
+//             font-weight: 500;
+//             border: none !important;
+//         }
+
+//         .t-form textarea {
+//             padding: 2.2%;
+//             font-size: 1.2rem;
+//             border: none !important;
+//         }
+
+//         .t-form textarea::placeholder {
+//             font-weight: 500;
+//         }
+
+//         .t-form button {
+//             padding: 12px;
+//         }
+
+//         .t-form .t-privacy {
+//             opacity: 0.7;
+//         }
+//     }
+
+
+
+
+//     .t-left-inner {
+//         margin-top: 8%;
+
+//         .t-sec2-heading h3 {
+//             font-size: 3.5rem;
+//             font-weight: 700;
+//             padding-bottom: 40px;
+//             text-align: center;
+//         }
+
+//         .t-comments img {
+//             width: 70px;
+//         }
+
+//         .t-comments .comments-text {
+//             .t-cmm {
+//                 font-weight: 500;
+//                 font-size: 1.1rem;
+//             }
+
+//             .t-c-name {
+//                 /* word-spacing: 5px; */
+//                 font-size: 1.2rem;
+//             }
+
+//             .t-c-role {
+//                 margin-top: -1.9%;
+//                 font-weight: 500;
+//                 font-size: 15px;
+//             }
+
+//         }
+
+//     }
+// }
+
+// @media (max-width: 932px) {
+//     .t-container-section-1 {
+//         .t-heading h1 {
+//             font-size: 3rem;
+//         }
+
+//         .t-desc p {
+//             font-size: 16px;
+//         }
+
+//         .accordion .accordion-item .accordion-header button {
+//             font-size: 14px;
+//         }
+
+//         .accordion .accordion-item .accordion-collapse .accordion-body {
+//             font-size: 14px;
+//         }
+//     }
+
+//     .hide-text {
+//         font-size: 3rem;
+//     }
+
+//     .t-container-section-2 .t-container-section-2-inner {
+//         .t-form input {
+//             font-size: 1rem;
+//         }
+
+//         .t-form textarea {
+//             font-size: 1rem;
+//         }
+//     }
+
+
+//     .t-left-inner {
+//         .t-sec2-heading h3 {
+//             font-size: 3rem;
+//         }
+
+//         .t-comments img {
+//             width: 60px;
+//         }
+
+//         .t-comments .comments-text {
+//             .t-cmm {
+//                 font-weight: 500;
+//                 font-size: 0.9rem;
+//             }
+
+//             .t-c-name {
+//                 font-size: 1rem;
+//             }
+
+//             .t-c-role {
+//                 margin-top: -1.9%;
+//                 font-weight: 500;
+//                 font-size: 14px;
+//             }
+//         }
+//     }
+// }
+
+
+// @media (max-width: 639px) {
+//     .t-container-section-1 {
+//         .t-heading h1 {
+//             font-size: 2.6rem;
+//         }
+
+//         .t-desc p {
+//             font-size: 12px;
+//         }
+
+//         /* .accordion .accordion-item .accordion-header button {
+//             font-size: 12px;
+//         } */
+
+//         .hide-btn-text {
+//             display: none;
+//         }
+
+//         .show-btn-text {
+//             display: block;
+//         }
+
+//         .accordion .accordion-item .accordion-collapse .accordion-body {
+//             font-size: 14px;
+//         }
+//     }
+
+
+
+//     .hide-text {
+//         font-size: 2.6rem;
+//     }
+
+
+
+//     .t-container-section-2 .t-container-section-2-inner {
+//         .t-form input {
+//             font-size: 0.85rem;
+//         }
+
+//         .t-form textarea {
+//             font-size: 0.85rem;
+//         }
+
+//         .t-form .t-privacy {
+//             font-size: 10px;
+//         }
+
+//         .t-form label,
+//         .t-form .required-text {
+//             font-size: 14px;
+//         }
+//     }
+
+
+
+//     .t-left-inner {
+//         .t-sec2-heading h3 {
+//             font-size: 2.6rem;
+//         }
+
+//         .t-comments img {
+//             width: 55px;
+//         }
+
+//         .t-comments .comments-text {
+//             .t-cmm {
+//                 font-weight: 500;
+//                 font-size: 0.8rem;
+//             }
+
+//             .t-c-name {
+//                 font-size: 0.9rem;
+//             }
+
+//             .t-c-role {
+//                 margin-top: -1.9%;
+//                 font-weight: 500;
+//                 font-size: 13px;
+//             }
+
+//         }
+//     }
+// }
+
+
+// @media (max-width: 412px) {
+//     .t-container-section-1 {
+//         .t-heading h1 {
+//             font-size: 2.3rem;
+//         }
+
+//         .t-desc p {
+//             font-size: 10px;
+//         }
+
+//         .accordion .accordion-item .accordion-header button {
+//             font-size: 12px;
+//         }
+
+//         .hide-btn-text {
+//             display: none;
+//         }
+
+//         .show-btn-text {
+//             display: block;
+//         }
+
+//         .accordion .accordion-item .accordion-collapse .accordion-body {
+//             font-size: 11px;
+//         }
+//     }
+
+
+
+//     .hide-text {
+//         font-size: 2.3rem;
+//     }
+
+
+
+//     .t-container-section-2 .t-container-section-2-inner {
+//         .t-form input {
+//             font-size: 0.75rem;
+//         }
+
+//         .t-form textarea {
+//             font-size: 0.75rem;
+//         }
+
+//         .t-form .t-privacy {
+//             font-size: 10px;
+//         }
+
+//         .t-form label,
+//         .t-form .required-text {
+//             font-size: 14px;
+//         }
+
+//         .t-form button {
+//             padding: 8px;
+//         }
+//     }
+
+
+
+//     .t-left-inner {
+//         .t-sec2-heading h3 {
+//             font-size: 2.3rem;
+//         }
+
+//         .t-comments img {
+//             width: 50px;
+//         }
+
+//         .t-comments .comments-text {
+//             .t-cmm {
+//                 font-weight: 500;
+//                 font-size: 0.7rem;
+//             }
+
+//             .t-c-name {
+//                 font-size: 0.7rem;
+//             }
+
+//             .t-c-role {
+//                 margin-top: -1.9%;
+//                 font-weight: 500;
+//                 font-size: 11px;
+//             }
+
+//         }
+//     }
+// }
+
+// @media (max-width: 365px) {
+//     .t-container-section-1 {
+//         .t-heading h1 {
+//             font-size: 2.2rem;
+//         }
+
+//         .t-desc p {
+//             font-size: 9px;
+//         }
+//     }
+
+
+//     .hide-text {
+//         font-size: 2.2rem;
+//     }
+
+
+//     .t-left-inner {
+//         .t-sec2-heading h3 {
+//             font-size: 2.2rem;
+//             padding-bottom: 4%;
+//         }
+//     }
+// }

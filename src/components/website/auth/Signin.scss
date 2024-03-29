@@ -1,3 +1,31 @@
+//Defining mixins ----------------------------------->
+
+@mixin tablet-Signin {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-landscape-Signin {
+    @media (max-width: 570px) {
+      @content;
+    }
+  }
+  
+  @mixin extra-small-mobile-Signin {
+    @media (max-width: 500px) {
+      @content;
+    }
+  }
+  
+  @mixin ultra-small-mobile-Signin {
+    @media (max-width: 360px) {
+      @content;
+    }
+  }
+  
+
+
 .s-container-main {
     padding: 1%;
     display: flex;
@@ -9,6 +37,15 @@
 .s-container-inner {
     width: 60%;
     height: fit-content;
+    @include extra-small-mobile-Signin{
+        width: 85%;
+        margin: auto;
+    }
+    @include ultra-small-mobile-Signin{
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
 }
 
 .logo-1 {
@@ -31,6 +68,12 @@
     text-decoration: none solid rgb(29, 28, 29);
     text-indent: 0px;
     padding-bottom: 5px;
+    @include tablet-Signin{
+        font-size: 2.3rem;
+    }
+    @include mobile-landscape-Signin{
+        font-size: 2rem;
+    }
 }
 
 .desc-1 {
@@ -76,6 +119,15 @@
     width: 100%;
 }
 
+.btn1 .btn{
+    @include extra-small-mobile-Signin{
+        font-size: 0.9rem;
+    }
+    @include ultra-small-mobile-Signin{
+        font-size: 0.9rem;
+    }
+}
+
 .divider-or {
     display: flex;
     align-items: center;
@@ -94,14 +146,14 @@
     font-size: 18px;
 }
 
-.btns-1 {
+.btns-110 {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
 }
 
-.btns-1 .btn-2 {
+.btns-110 .btn-2 {
     margin-top: 25px;
 }
 
@@ -149,50 +201,80 @@
     color: rgb(65, 65, 252);
 }
 
-/* responsive */
-@media (max-width:700px) {
-    .heading-1 h1 {
-        font-size: 2.3rem;
-    }
-}
 
-@media (max-width:570px) {
-    .heading-1 h1 {
-        font-size: 2rem;
-    }
+//new
 
-    .desc-1 p {
+.desc-1 p {
+    @include mobile-landscape-Signin{
         font-size: 13px;
     }
+}
 
-    .btns-1 button {
+.btns-110 button{
+    @include mobile-landscape-Signin{
         font-size: 1rem;
     }
-}
-
-@media (max-width:500px) {
-    .s-container-inner {
-        width: 85%;
-        margin: auto;
-    }
-    .btns-1 button {
+    @include extra-small-mobile-Signin{
         font-size: 0.8rem;
     }
-    .btn1 .btn{
-        font-size: 0.9rem;
+    @include ultra-small-mobile-Signin{
+        font-size: 0.8rem;
     }
 }
 
-@media (max-width:360px) {
-    .s-container-inner {
-        width: 100%;
-        margin: auto;
-        padding: 10px;
-    }
-    .btns-1 button {
-        font-size: 0.8rem;
-    }
-    .btn1 .btn{
-        font-size: 0.9rem;
-    }
-}
+//new end
+
+
+
+
+
+
+
+
+/* responsive */
+// @media (max-width:700px) {
+//     .heading-1 h1 {
+//         font-size: 2.3rem;
+//     }
+// }
+
+// @media (max-width:570px) {
+//     .heading-1 h1 {
+//         font-size: 2rem;
+//     }
+
+//     .desc-1 p {
+//         font-size: 13px;
+//     }
+
+//     .btns-110 button {
+//         font-size: 1rem;
+//     }
+// }
+
+// @media (max-width:500px) {
+//     .s-container-inner {
+//         width: 85%;
+//         margin: auto;
+//     }
+//     .btns-110 button {
+//         font-size: 0.8rem;
+//     }
+//     .btn1 .btn{
+//         font-size: 0.9rem;
+//     }
+// }
+
+// @media (max-width:360px) {
+//     .s-container-inner {
+//         width: 100%;
+//         margin: auto;
+//         padding: 10px;
+//     }
+//     .btns-110 button {
+//         font-size: 0.8rem;
+//     }
+//     .btn1 .btn{
+//         font-size: 0.9rem;
+//     }
+// }

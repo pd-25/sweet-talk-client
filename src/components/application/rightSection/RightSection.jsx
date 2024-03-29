@@ -12,7 +12,7 @@ const RightSection = () => {
 
                     {/* <!-- Button trigger modal --> */}
                     <a type="button" className="btn modal-btn-general text-white" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                        style={{fontWeight:'600', fontSize:'1.1rem'}}>
+                        style={{ fontWeight: '600', fontSize: '1.1rem' }}>
                         <i className="fa-solid fa-hashtag"></i> general <i
                             className="fa-solid fa-caret-down text-white"></i>
                     </a>
@@ -39,6 +39,27 @@ const RightSection = () => {
                     {/* <!-- Modal --> */}
 
                     <div className="top-left-general d-flex gap-2">
+
+                        <div className="searchbar-hide-show d-flex">
+                            {/* <!-- Button trigger modal --> */}
+                            <button type="button" className="btn" data-bs-toggle="modal" data-bs-target="#search-bar">
+                               <span><i className="fa-solid fa-magnifying-glass"></i></span>
+                            </button>
+
+                            {/* <!-- Modal --> */}
+                            <div className="modal fade" id="search-bar" tabIndex="-1" aria-labelledby="search-bar-show" aria-hidden="true">
+                                <div className="modal-dialog">
+                                    <div className="modal-content">
+                                        <div className="modal-body">
+                                            <input className='modal-body-input' type="search" name="" id="" placeholder='Search Here'/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                         <div className="user-top-count">
                             <span><i className="fa-solid fa-user text-dark"></i></span>
                             <span><i className="fa-solid fa-user text-dark"></i></span>
@@ -48,7 +69,7 @@ const RightSection = () => {
                         <div className="huddle-top">
                             <div className="btn btn-huddle">
                                 <a className="btn text-white btn-sm" type="button">
-                                    <i className="fa-solid fa-headphones-simple" style={{fontSize:'1rem'}}></i><span style={{fontSize:'1rem', padding:'5px'}}>Huddle</span>
+                                    <i className="fa-solid fa-headphones-simple" style={{ fontSize: '1rem' }}></i><span style={{ fontSize: '1rem', padding: '5px' }}>Huddle</span>
                                 </a>
                                 <a type="button"
                                     className="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
@@ -69,7 +90,7 @@ const RightSection = () => {
                         <div className="huddle-top">
                             <div className="btn btn-canvas">
                                 <button className="btn text-white btn-sm" type="button">
-                                    <i className="fa-solid fa-file-circle-plus" style={{fontSize:'1rem'}}></i><span style={{fontSize:'1rem', padding:'5px'}}>Canvas</span>
+                                    <i className="fa-solid fa-file-circle-plus" style={{ fontSize: '1rem' }}></i><span style={{ fontSize: '1rem', padding: '5px' }}>Canvas</span>
                                 </button>
                             </div>
                         </div>
@@ -96,7 +117,7 @@ const RightSection = () => {
                     {/* <!-- channel-something-section start --> */}
                     <div className="channel-inner-section px-2">
                         <h1>
-                            <span><i className="fa-solid fa-bullhorn" style={{fontSize:'1.7rem'}}></i></span>
+                            <span><i className="fa-solid fa-bullhorn"></i></span>
                             &nbsp;You’re looking at the&nbsp;
                             <span>
                                 <i className="fa-solid fa-hashtag"></i>general
@@ -447,7 +468,7 @@ const RightSection = () => {
                             <div
                                 className="bootom-reply-section-right d-flex justify-content-center align-items-center">
                                 <p className="send-btn d-flex gap-2 justify-content-center align-items-center"
-                                    style={{marginbottom:'0'}}>
+                                    style={{ marginbottom: '0' }}>
                                     <span className="btn"><i className="fa-regular fa-paper-plane"></i></span>
                                     <span className="btn"><i className="fa-solid fa-caret-down"></i></span>
                                 </p>

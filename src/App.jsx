@@ -14,6 +14,7 @@ import Step3 from './components/website/creationsteps/Step3';
 import Step4 from './components/website/creationsteps/Step4';
 import Step5 from './components/website/creationsteps/Step5';
 import MainApp from './components/application/mainapp/MainApp';
+import TalkTous from './components/website/talktous/TalkTous';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -43,6 +44,10 @@ function App() {
         //   path:'/log-home',
         //   element: <WithLoginHome />,
         // }
+        {
+          path:'/help',
+          element: <TalkTous />,
+        }
 
       ],
     },

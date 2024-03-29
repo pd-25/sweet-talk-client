@@ -103,3 +103,8 @@ body{
 p {
   padding: 0;
 }
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}

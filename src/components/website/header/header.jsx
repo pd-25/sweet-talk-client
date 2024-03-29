@@ -73,7 +73,7 @@ const Header = () => {
 
                     </ul>
                     <form className="d-flex gap-4">
-                        <a className="btn btn-nav gr text-white" type="button">Talk to Us</a>
+                        <NavLink to='/help' className="btn btn-nav gr text-white" type="button">Talk to Us</NavLink>
                         <NavLink to='/create-workspace' className="btn btn-nav gr  text-white" type="button">Create New Workspace</NavLink>
                     </form>
                 </div>

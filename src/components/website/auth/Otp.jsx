@@ -11,11 +11,11 @@ const Otp = () => {
         </div>
 
         <div className="heading-1">
-            <h1>Check Your Email htmlFor Code</h1>
+            <h1>Check Your Email For Code</h1>
         </div>
 
         <div className="desc-1">
-            <p>we have sent 4-character code to <span className="" style={{color: "var(--solid)"}}>bororo@gmail.com.</span>
+            <p>we have sent 4-character code to <span className="" style={{color: "var(--solid)"}}>bororo@gmail.com. </span>
                 The code espires
                 shortly, so please enter it soon.</p>
         </div>

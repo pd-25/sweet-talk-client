@@ -20,7 +20,7 @@ const Login = () => {
 
 
                 {/* <!-- btns --> */}
-                <div className="btns-1">
+                <div className="btns-110">
                     <div className="btn gr">
                         <button className="btn text-white"><i className="fa-brands fa-google text-white"></i>&nbsp; Continue with
                             Google</button>

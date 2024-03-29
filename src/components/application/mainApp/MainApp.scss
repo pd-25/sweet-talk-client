@@ -1,3 +1,57 @@
+//Definig the mixins ---------------------------------------->
+
+@mixin tablet-app {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin laptop-app {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait-app {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape-app {
+    @media (min-width: 600px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile-app {
+    @media (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin small-mobile-app {
+    @media (max-width: 563px) {
+        @content;
+    }
+}
+
+@mixin extra-small-mobile-app {
+    @media (max-width: 435px) {
+        @content;
+    }
+}
+
+@mixin ultra-small-mobile-app {
+    @media (max-width: 377px) {
+        @content;
+    }
+}
+
+
+
+
+
 :root {
     --gr: linear-gradient(to right, #e2062e, #0b5adb);
     --solid: #e2062e;
@@ -11,7 +65,8 @@
     color: white;
     transition: all 200ms ease-in;
 }
-i{
+
+i {
     color: #b9babd !important;
 }
 
@@ -21,13 +76,53 @@ i{
     grid-template-columns: 1fr 2fr 8fr;
     height: 100%;
     margin-right: 1rem;
-    
+
+    @include mobile-landscape-app {
+        margin-right: 0;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 2fr 6fr !important;
+    }
+
+    @include mobile-app {
+        margin-right: 0;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 2fr 6fr !important;
+    }
+
+    @include small-mobile-app {
+        margin-right: 0;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 2fr 5fr !important;
+    }
+
+    @include extra-small-mobile-app {
+        margin-right: 0;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+    @include ultra-small-mobile-app {
+        margin-right: 0;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+
 }
 
 .mid-left-section-1 {
-
     overflow: hidden !important;
     height: 100%;
+
+    @include extra-small-mobile-app {
+        display: none;
+    }
+    @include ultra-small-mobile-app{
+        display: none;
+    }
 }
 
 .right-side {
@@ -230,8 +325,35 @@ i{
     gap: 4%;
 }
 
-.btns button, .btns1 button{
-    font-size:  15px;
+.btns button,
+.btns button i,
+.btns1 button,
+.btns1 button i {
+    font-size: 15px;
+
+    @include tablet-portrait-app {
+        font-size: 0.7rem;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 0.7rem;
+    }
+
+    @include mobile-app {
+        font-size: 0.5rem;
+    }
+
+    @include small-mobile-app {
+        font-size: 0.6rem;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 0.6rem;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 0.5rem;
+    }
 }
 
 /* .reply-section-main {
@@ -245,10 +367,42 @@ i{
 .container-top-bar .input-field {
     width: 30rem;
     transition: all 300ms ease-in;
+
+    @include mobile-app {
+        width: 18rem !important;
+    }
+
+    @include small-mobile-app {
+        width: 15rem !important;
+    }
+
+    @include small-mobile-app {
+        width: 12rem !important;
+    }
+
+    @include ultra-small-mobile-app {
+        width: 12rem !important;
+    }
 }
 
 .mid-sidebar-section-4 {
     height: 80%;
+
+    @include mobile-landscape-app {
+        display: none !important;
+    }
+
+    @include small-mobile-app {
+        display: none !important;
+    }
+
+    @include extra-small-mobile-app {
+        display: none !important;
+    }
+
+    @include ultra-small-mobile-app {
+        display: none !important;
+    }
 }
 
 .bt-navbar .bt-inner {
@@ -266,6 +420,49 @@ i{
 
 .bottom-main {
     display: none;
+
+    @include small-mobile-app {
+        display: block !important;
+    }
+
+    @include extra-small-mobile-app {
+        display: block !important;
+    }
+
+    @include ultra-small-mobile-app {
+        display: block !important;
+    }
+}
+
+.bottom-main .bt-navbar .bt-inner .bt-navlink a {
+    @include small-mobile-app {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+.bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt {
+    @include small-mobile-app {
+        margin-top: -8px;
+    }
+
+    @include extra-small-mobile-app {
+        margin-top: -8px;
+    }
+
+    @include ultra-small-mobile-app {
+        margin-top: -8px;
+    }
 }
 
 body {
@@ -312,10 +509,24 @@ i {
 
 #sidebar {
     height: auto;
+
+    @include laptop-app {
+        height: 52vh;
+    }
+}
+
+.mid-sidebar-section-4 {
+    @include mobile-app {
+        display: none !important;
+    }
 }
 
 .inner-sidebar {
     height: auto;
+
+    @include laptop-app {
+        height: 50vh;
+    }
 }
 
 .top-bar-container {
@@ -332,6 +543,43 @@ i {
 
 .channels p a:hover {
     color: #8e8c8c;
+
+    @include tablet-portrait-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+.channels a {
+    @include tablet-portrait-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @include mobile-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @include small-mobile-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 13px;
+        font-weight: 600;
+    }
 }
 
 // .drp::after {
@@ -426,6 +674,33 @@ i {
     font-size: 1.3rem;
 }
 
+.searchbar-hide-show {
+    .searchbar-hide-show .btn span {
+        width: 100%;
+    }
+
+    .searchbar-hide-show .modal-body .modal-body-input {
+        border: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        opacity: 0.7;
+    }
+
+    .searchbar-hide-show .modal-body .modal-body-input::placeholder {
+        font-size: 1.2rem;
+    }
+
+    @include mobile-app {
+        display: flex !important;
+
+        .searchbar-hide-show .btn span .fa-magnifying-glass {
+            font-size: 17px !important;
+        }
+    }
+}
+
+
 .user-top-count {
     display: flex;
     justify-content: center;
@@ -434,6 +709,22 @@ i {
     padding: 1px;
     gap: 4px;
     border-radius: 5px;
+
+    @include mobile-app {
+        display: none !important;
+    }
+
+    @include small-mobile-app {
+        display: none !important;
+    }
+
+    @include extra-small-mobile-app {
+        display: none !important;
+    }
+
+    @include ultra-small-mobile-app {
+        display: none !important;
+    }
 }
 
 .user-top-count span {
@@ -459,6 +750,22 @@ i {
 .huddle-top {
     border: 1px solid #2e3035;
     border-radius: 5px;
+
+    @include mobile-app {
+        display: none !important;
+    }
+
+    @include small-mobile-app {
+        display: none !important;
+    }
+
+    @include extra-small-mobile-app {
+        display: none !important;
+    }
+
+    @include ultra-small-mobile-app {
+        display: none !important;
+    }
 }
 
 .btn-secondary {
@@ -487,10 +794,53 @@ i {
     background-color: #2e3035;
 }
 
-.channel-inner-section h1 {
+.channel-inner-section h1,
+.channel-inner-section h1 i {
     color: #d1d2d3;
     font-size: 30px;
     font-weight: 700;
+
+    @include tablet-portrait-app {
+        font-size: 1.4rem;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 1.4rem;
+    }
+
+    @include mobile-app {
+        font-size: 1.2rem;
+    }
+
+    @include small-mobile-app {
+        font-size: 1.2rem;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 1rem;
+    }
+    @include ultra-small-mobile-app {
+        font-size: 1rem;
+    }
+}
+
+.channel-inner-section p {
+    font-size: 12px;
+
+    @include mobile-app {
+        font-size: 10px;
+    }
+
+    @include small-mobile-app {
+        font-size: 12px;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 10px;
+    }
+    @include ultra-small-mobile-app {
+        font-size: 10px;
+    }
 }
 
 .edit-desc {
@@ -510,6 +860,10 @@ i {
     padding-right: 1rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+}
+
+.searchbar-hide-show {
+    display: none !important;
 }
 
 .btns {
@@ -576,16 +930,105 @@ i {
     top: 1.5rem;
 }
 
+.msg-inner-section img {
+    @include tablet-portrait-app {
+        width: 40px;
+        height: 40px;
+        margin-top: 3px;
+    }
+
+    @include mobile-app {
+        width: 38px;
+        height: 38px;
+        margin-top: 5px;
+    }
+
+    @include small-mobile-app {
+        width: 50px;
+        height: 50px;
+    }
+
+    @include extra-small-mobile-app {
+        width: 40px;
+        height: 40px;
+    }
+
+    @include ultra-small-mobile-app {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 .msg-section .msg-desc {
     line-height: 10px;
     width: fit-content;
     position: relative;
     top: 3px;
+
+    @include small-mobile-app {
+        padding-top: 4.5px;
+    }
+
+    @include extra-small-mobile-app {
+        padding-top: 1px;
+    }
+
+    @include ultra-small-mobile-app {
+        padding-top: 1px;
+    }
 }
 
 .msg-desc-top p {
     font-weight: 600;
     font-size: 1.2rem;
+
+    @include tablet-portrait-app {
+        font-size: 1rem;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 1rem;
+    }
+
+    @include mobile-app {
+        font-size: 0.7rem;
+    }
+
+    @include small-mobile-app {
+        font-size: 0.7rem;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 0.6rem;
+    }
+    @include ultra-small-mobile-app {
+        font-size: 0.6rem;
+    }
+}
+
+.msg-desc p {
+    @include tablet-portrait-app {
+        font-size: 14px;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 14px;
+    }
+
+    @include mobile-app {
+        font-size: 12px;
+    }
+
+    @include small-mobile-app {
+        font-size: 14px;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 12px;
+    }
+    @include ultra-small-mobile-app {
+        font-size: 12px;
+    }
 }
 
 .msg-desc-top span {
@@ -648,14 +1091,7 @@ i {
 
 
 /* for fixed position start */
-/* .scrollable-content {
-height: 30rem;
-overflow-y: auto;
-} */
-/* .scrollable-content::-webkit-scrollbar {
-    width: 0; 
-    height: 0; 
-} */
+
 
 .right-side {
     /* display: flex; */
@@ -668,6 +1104,53 @@ overflow-y: auto;
     flex: 1;
     overflow-y: auto;
     height: 600px !important;
+
+    @include tablet-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 530px !important;
+    }
+
+    @include laptop-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 530px !important;
+    }
+
+    @include tablet-portrait-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 530px !important;
+    }
+
+    @include mobile-landscape-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 530px !important;
+    }
+
+    @include mobile-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 530px !important;
+    }
+
+    @include small-mobile-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 410px !important;
+    }
+
+    @include extra-small-mobile-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 520px !important;
+    }
+    @include ultra-small-mobile-app {
+        flex: 1;
+        overflow-y: auto;
+        height: 340px !important;
+    }
 }
 
 .reply-section-main {
@@ -681,553 +1164,886 @@ overflow-y: auto;
         border-radius: 10px;
         overflow: hidden;
     }
-    
+
 }
 
 .dms-main .sub-dms span {
     font-size: 0.92rem !important;
+
+    @include tablet-app {
+        font-size: 0.9rem;
+    }
+
+    @include laptop-app {
+        font-size: 0.8rem;
+    }
+
+    @include tablet-portrait-app {
+        font-size: 0.7rem;
+    }
+
+    @include mobile-landscape-app {
+        font-size: 0.7rem !important;
+    }
+
+    @include mobile-app {
+        font-size: 0.7rem !important;
+    }
 }
-.menu-operations span i{
-    /* font-size: 10px; */
+
+.dms-main .sub-dms img {
+    @include laptop-app {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.add-colleagues p {
+    @include laptop-app {
+        font-size: 11px;
+    }
+
+    .add-colleagues p a {
+        @include tablet-portrait-app {
+            font-size: 14px !important;
+        }
+
+        @include mobile-landscape-app {
+            font-size: 14px !important;
+        }
+
+        @include mobile-app {
+            font-size: 14px !important;
+        }
+
+        @include small-mobile-app {
+            font-size: 14px !important;
+        }
+    }
+}
+
+.menu-operations span i {
     cursor: pointer;
+
+    @include mobile-app {
+        font-size: 10px;
+    }
+
+    @include small-mobile-app {
+        font-size: 14px;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 14px;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 14px;
+    }
 }
-.bottom-operations-inner span i{
-    /* font-size: 10px; */
+
+.bottom-operations-inner span i {
     cursor: pointer;
+
+    @include mobile-app {
+        font-size: 10px;
+    }
+
+    @include small-mobile-app {
+        font-size: 14px;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 14px;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 14px;
+    }
 }
+
+.send-btn span i {
+    @include mobile-app {
+        padding-left: -20px !important;
+    }
+
+    @include small-mobile-app {
+        padding-left: -20px !important;
+    }
+
+    @include extra-small-mobile-app {
+        padding-left: -20px !important;
+        font-size: 14px;
+    }
+
+    @include ultra-small-mobile-app {
+        padding-left: -20px !important;
+        font-size: 14px;
+    }
+}
+
 /* for fixed position end */
+
+
+
+
+//new
+
+.hide-2 {
+    @include laptop-app {
+        display: block;
+    }
+
+    @include tablet-portrait-app {
+        display: none !important;
+    }
+
+    @include mobile-landscape-app {
+        display: none !important;
+    }
+
+    @include mobile-app {
+        display: none !important;
+    }
+
+    @include small-mobile-app {
+        display: none !important;
+    }
+
+    @include extra-small-mobile-app {
+        display: none !important;
+    }
+    @include ultra-small-mobile-app {
+        display: none !important;
+    }
+}
+
+.acc-name p {
+    @include mobile-app {
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 3px;
+    }
+
+    @include small-mobile-app {
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 3px;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 3px;
+    }
+
+    @include ultra-small-mobile-app {
+        font-size: 14px;
+        padding-bottom: 0;
+        margin-bottom: 3px;
+    }
+}
+
+.right-top .modal-btn-general {
+    @include mobile-app {
+        font-size: 14px !important;
+    }
+
+    @include small-mobile-app {
+        font-size: 1rem !important;
+    }
+
+    @include extra-small-mobile-app {
+        font-size: 1rem !important;
+    }
+}
+
+//new end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 /* responsive */
 
 
-@media only screen and (min-width: 1200px) {
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        /* height: 620px !important; */
-        height: 530px !important;
-    }
-    .reply-section-main {
-       /* margin: 1%;
-       margin-top: -4px;
-       margin-bottom: 0; */
-    }
+// @media only screen and (min-width: 1200px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         /* height: 620px !important; */
+//         height: 530px !important;
+//     }
 
-    .dms-main .sub-dms span {
-        font-size: 0.9rem;
-    }
-}
+//     .reply-section-main {
+//         /* margin: 1%;
+//        margin-top: -4px;
+//        margin-bottom: 0; */
+//     }
 
-@media (min-width: 992px) and (max-width:1199px) {
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 530px !important;
-    }
-    /* .reply-section-main {
-        margin-top: 10%;
-    } */
+//     .dms-main .sub-dms span {
+//         font-size: 0.9rem;
+//     }
+// }
 
-    .dms-main .sub-dms span {
-        font-size: 0.8rem;
-    }
+// @media (min-width: 992px) and (max-width:1199px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 530px !important;
+//     }
 
-    .dms-main .sub-dms img {
-        width: 20px;
-        height: 20px;
-    }
+//     /* .reply-section-main {
+//         margin-top: 10%;
+//     } */
 
-    .add-colleagues p {
-        font-size: 11px;
-    }
+//     .dms-main .sub-dms span {
+//         font-size: 0.8rem;
+//     }
 
-    #sidebar {
-        height: 52vh;
-    }
+//     .dms-main .sub-dms img {
+//         width: 20px;
+//         height: 20px;
+//     }
 
-    .inner-sidebar {
-        height: 50vh;
-    }
-    .hide-2 {
-        display: block;
-    }
-}
+//     .add-colleagues p {
+//         font-size: 11px;
+//     }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 530px !important;
-    }
-    .dms-main .sub-dms span {
-        font-size: 0.7rem !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .add-colleagues p a{
-        font-size:  14px !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1.4rem;
-    }
+//     #sidebar {
+//         height: 52vh;
+//     }
 
-    .channel-inner-section p {
-        font-size: 12px;
-    }
-    .msg-desc-top p{
-        font-size: 1rem;
-    }
-    .msg-desc p{
-        font-size: 14px;
-    }
-    .msg-inner-section img{
-        width: 40px;
-        height: 40px;
-        margin-top: 3px;
-    }
-    .btns button{
-        font-size: 0.7rem;
-    }
-}
+//     .inner-sidebar {
+//         height: 50vh;
+//     }
+
+//     .hide-2 {
+//         display: block;
+//     }
+// }
+
+// @media (min-width: 768px) and (max-width: 991px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 530px !important;
+//     }
+
+//     .dms-main .sub-dms span {
+//         font-size: 0.7rem !important;
+//     }
+
+//     .hide-2 {
+//         display: none !important;
+//     }
+
+//     .add-colleagues p a {
+//         font-size: 14px !important;
+//     }
+
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1.4rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 12px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 1rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 14px;
+//     }
+
+//     .msg-inner-section img {
+//         width: 40px;
+//         height: 40px;
+//         margin-top: 3px;
+//     }
+
+//     .btns button {
+//         font-size: 0.7rem;
+//     }
+// }
 
 
-@media (min-width:600px) and (max-width: 767px) {
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 530px !important;
-    }
-    .mid-section-5{
-        margin-right: 0;
-        margin: 5px;
-    }
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        /* height: 28rem !important; */
-    }
-    .reply-section-main {
-        /* margin-top: 20%; */
-    }
-    .mid-sidebar-section-4 {
-        display: none !important;
-    }
-    .mid-section-5 {
-        display: grid;
-        grid-template-columns: 2fr 6fr !important;
-    }
-    .dms-main .sub-dms span {
-        font-size: 0.7rem !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .add-colleagues p a{
-        font-size:  14px !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1.4rem;
-    }
+// @media (min-width:600px) and (max-width: 767px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 530px !important;
+//     }
 
-    .channel-inner-section p {
-        font-size: 12px;
-    }
-    .msg-desc-top p{
-        font-size: 1rem;
-    }
-    .msg-desc p{
-        font-size: 14px;
-    }
-    .btns button{
-        font-size: 0.7rem;
-    }
-}
-@media only screen and (max-width: 599px) {
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 530px !important;
-    }
-    .mid-section-5{
-        margin-right: 0;
-        margin: 5px;
-    }
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        /* height: 28rem !important; */
-    }
-    .reply-section-main {
-        /* margin-top: 20%; */
-    }
-    .mid-sidebar-section-4 {
-        display: none !important;
-    }
-    .mid-section-5 {
-        display: grid;
-        grid-template-columns: 2fr 6fr !important;
-    }
-    .dms-main .sub-dms span {
-        font-size: 0.7rem !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .add-colleagues p a{
-        font-size:  14px !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1.2rem;
-    }
+//     .mid-section-5 {
+//         margin-right: 0;
+//         margin: 5px;
+//     }
 
-    .channel-inner-section p {
-        font-size: 10px;
-    }
-    .msg-desc-top p{
-        font-size: 0.7rem;
-    }
-    .msg-desc p{
-        font-size: 12px;
-    }
-    .btns button{
-        font-size: 0.5rem;
-    }
-    .top-left-general{
-        display: none !important;
-    }
-    .msg-inner-section img{
-        width: 38px;
-        height: 38px;
-        margin-top: 5px;
-    }
-    .container-top-bar .input-field {
-        width: 18rem !important;
-    }
-    .menu-operations span i{
-        font-size: 10px;
-        cursor: pointer;
-    }
-    .bottom-operations-inner span i{
-        font-size: 10px;
-        cursor: pointer;
-    }
-    .send-btn span i{
-        font-size: 14px;
-    }
-    .send-btn span i{
-        padding-left: -20px !important;
-    }
-    .acc-name p{
-        font-size: 14px;
-        padding-bottom: 0;
-        margin-bottom: 3px;
-    }
-    .right-top .modal-btn-general{
-        font-size: 14px !important;
-    }
-}
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         /* height: 28rem !important; */
+//     }
 
-@media only screen and (max-width: 563px){
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 410px !important;
-    }
-    .mid-section-5{
-        margin-right: 0;
-        margin: 5px;
-    }
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        /* height: 28rem !important; */
-    }
-    .reply-section-main {
-        /* margin-top: 20%; */
-    }
-    .mid-sidebar-section-4 {
-        display: none !important;
-    }
-    /* .mid-left-section-1{
-        display: none;
-    } */
-    .mid-section-5 {
-        display: grid;
-        grid-template-columns: 2fr 5fr !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .add-colleagues p a{
-        font-size:  14px !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1.2rem;
-    }
+//     .reply-section-main {
+//         /* margin-top: 20%; */
+//     }
 
-    .channel-inner-section p {
-        font-size: 12px;
-    }
-    .msg-desc-top p{
-        font-size: 0.7rem;
-    }
-    .msg-desc p{
-        font-size: 14px;
-    }
-    .btns button{
-        font-size: 0.6rem;
-    }
-    .top-left-general{
-        display: none !important;
-    }
-    .msg-inner-section img{
-        width: 50px;
-        height: 50px;
-    }
-    .msg-desc{
-        padding-top: 4.5px;
-    }
-    .container-top-bar .input-field {
-        width: 15rem !important;
-    }
-    .menu-operations span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .bottom-operations-inner span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .send-btn span i{
-        font-size: 14px;
-    }
-    .send-btn span i{
-        padding-left: -20px !important;
-    }
-    .acc-name p{
-        font-size: 14px;
-        padding-bottom: 0;
-        margin-bottom: 3px;
-    }
-    .right-top .modal-btn-general{
-        font-size: 1rem !important;
-    }
-    .bottom-main {
-        display: block !important;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a{
-        font-size:  12px;
-        font-weight: 400;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt{
-        margin-top: -8px;
-    }
-}
+//     .mid-sidebar-section-4 {
+//         display: none !important;
+//     }
 
-@media (min-width:378px) and (max-width: 435px){
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 520px !important;
-    }
-    .mid-section-5{
-        margin-right: 0;
-        margin: 5px;
-    }
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-    }
-    .mid-sidebar-section-4 {
-        display: none !important;
-    }
-    .mid-left-section-1{
-        display: none;
-    }
-    .mid-section-5 {
-        display: grid;
-        grid-template-columns: 1fr !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1rem;
-    }
+//     .mid-section-5 {
+//         display: grid;
+//         grid-template-columns: 2fr 6fr !important;
+//     }
 
-    .channel-inner-section p {
-        font-size: 10px;
-    }
-    .msg-desc-top p{
-        font-size: 0.6rem;
-    }
-    .msg-desc p{
-        font-size: 12px;
-    }
-    .btns button{
-        font-size: 0.6rem;
-    }
-    .top-left-general{
-        display: none !important;
-    }
-    .msg-inner-section img{
-        width: 40px;
-        height: 40px;
-    }
-    .msg-desc{
-        padding-top: 1px;
-    }
-    .container-top-bar .input-field {
-        width: 12rem !important;
-    }
-    .menu-operations span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .bottom-operations-inner span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .send-btn span i{
-        font-size: 14px;
-    }
-    .send-btn span i{
-        padding-left: -20px !important;
-    }
-    .acc-name p{
-        font-size: 14px;
-        padding-bottom: 0;
-        margin-bottom: 3px;
-    }
-    .right-top .modal-btn-general{
-        font-size: 1rem !important;
-    }
-    .bottom-main {
-        display: block !important;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a{
-        font-size:  12px;
-        font-weight: 400;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt{
-        margin-top: -8px;
-    }
-}
+//     .dms-main .sub-dms span {
+//         font-size: 0.7rem !important;
+//     }
 
-@media only screen and (max-width: 377px){
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-        height: 350px !important;
-    }
-    .mid-section-5{
-        margin-right: 0;
-        margin: 5px;
-    }
-    .scrollable-content {
-        flex: 1;
-        overflow-y: auto;
-    }
-    .mid-sidebar-section-4 {
-        display: none !important;
-    }
-    .mid-left-section-1{
-        display: none;
-    }
-    .mid-section-5 {
-        display: grid;
-        grid-template-columns: 1fr !important;
-    }
-    .hide-2 {
-        display: none !important;
-    }
-    .channels a{
-        font-size: 13px;
-        font-weight: 600;
-    }
-    .channel-inner-section h1 {
-        font-size: 1rem;
-    }
+//     .hide-2 {
+//         display: none !important;
+//     }
 
-    .channel-inner-section p {
-        font-size: 10px;
-    }
-    .msg-desc-top p{
-        font-size: 0.6rem;
-    }
-    .msg-desc p{
-        font-size: 12px;
-    }
-    .btns button{
-        font-size: 0.6rem;
-    }
-    .top-left-general{
-        display: none !important;
-    }
-    .msg-inner-section img{
-        width: 40px;
-        height: 40px;
-    }
-    .msg-desc{
-        padding-top: 1px;
-    }
-    .container-top-bar .input-field {
-        width: 12rem !important;
-    }
-    .menu-operations span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .bottom-operations-inner span i{
-        font-size: 14px;
-        cursor: pointer;
-    }
-    .send-btn span i{
-        font-size: 14px;
-    }
-    .send-btn span i{
-        padding-left: -20px !important;
-    }
-    .acc-name p{
-        font-size: 14px;
-        padding-bottom: 0;
-        margin-bottom: 3px;
-    }
-    .right-top .modal-btn-general{
-        font-size: 1rem !important;
-    }
-    .bottom-main {
-        display: block !important;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a{
-        font-size:  12px;
-        font-weight: 400;
-    }
-    .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt{
-        margin-top: -8px;
-    }
-}
+//     .add-colleagues p a {
+//         font-size: 14px !important;
+//     }
 
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1.4rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 12px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 1rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 14px;
+//     }
+
+//     .btns button {
+//         font-size: 0.7rem;
+//     }
+// }
+
+// @media only screen and (max-width: 599px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 530px !important;
+//     }
+
+//     .mid-section-5 {
+//         margin-right: 0;
+//         margin: 5px;
+//     }
+
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         /* height: 28rem !important; */
+//     }
+
+//     .reply-section-main {
+//         /* margin-top: 20%; */
+//     }
+
+//     .mid-sidebar-section-4 {
+//         display: none !important;
+//     }
+
+//     .mid-section-5 {
+//         display: grid;
+//         grid-template-columns: 2fr 6fr !important;
+//     }
+
+//     .dms-main .sub-dms span {
+//         font-size: 0.7rem !important;
+//     }
+
+//     .hide-2 {
+//         display: none !important;
+//     }
+
+//     .add-colleagues p a {
+//         font-size: 14px !important;
+//     }
+
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1.2rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 10px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 0.7rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 12px;
+//     }
+
+//     .btns button {
+//         font-size: 0.5rem;
+//     }
+
+//     .user-top-count,
+//     .huddle-top {
+//         display: none !important;
+//     }
+//     .searchbar-hide-show{
+//         display: flex !important;
+//     }
+//     .searchbar-hide-show .btn span {
+//         width: 100%;
+//     }
+
+//     .searchbar-hide-show .btn span .fa-magnifying-glass {
+//         font-size: 17px !important;
+//     }
+
+//     .msg-inner-section img {
+//         width: 38px;
+//         height: 38px;
+//         margin-top: 5px;
+//     }
+
+//     .container-top-bar .input-field {
+//         width: 18rem !important;
+//     }
+
+//     .menu-operations span i {
+//         font-size: 10px;
+//         cursor: pointer;
+//     }
+
+//     .bottom-operations-inner span i {
+//         font-size: 10px;
+//         cursor: pointer;
+//     }
+
+//     .send-btn span i {
+//         font-size: 14px;
+//     }
+
+//     .send-btn span i {
+//         padding-left: -20px !important;
+//     }
+
+//     .acc-name p {
+//         font-size: 14px;
+//         padding-bottom: 0;
+//         margin-bottom: 3px;
+//     }
+
+//     .right-top .modal-btn-general {
+//         font-size: 14px !important;
+//     }
+// }
+
+// @media only screen and (max-width: 563px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 410px !important;
+//     }
+
+//     .mid-section-5 {
+//         margin-right: 0;
+//         margin: 5px;
+//     }
+
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         /* height: 28rem !important; */
+//     }
+
+//     .reply-section-main {
+//         /* margin-top: 20%; */
+//     }
+
+//     .mid-sidebar-section-4 {
+//         display: none !important;
+//     }
+
+//     /* .mid-left-section-1{
+//         display: none;
+//     } */
+//     .mid-section-5 {
+//         display: grid;
+//         grid-template-columns: 2fr 5fr !important;
+//     }
+
+//     .hide-2 {
+//         display: none !important;
+//     }
+
+//     .add-colleagues p a {
+//         font-size: 14px !important;
+//     }
+
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1.2rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 12px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 0.7rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 14px;
+//     }
+
+//     .btns button {
+//         font-size: 0.6rem;
+//     }
+
+//     .top-left-general {
+//         display: none !important;
+//     }
+
+//     .msg-inner-section img {
+//         width: 50px;
+//         height: 50px;
+//     }
+
+//     .msg-desc {
+//         padding-top: 4.5px;
+//     }
+
+//     .container-top-bar .input-field {
+//         width: 15rem !important;
+//     }
+
+//     .menu-operations span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .bottom-operations-inner span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .send-btn span i {
+//         font-size: 14px;
+//     }
+
+//     .send-btn span i {
+//         padding-left: -20px !important;
+//     }
+
+//     .acc-name p {
+//         font-size: 14px;
+//         padding-bottom: 0;
+//         margin-bottom: 3px;
+//     }
+
+//     .right-top .modal-btn-general {
+//         font-size: 1rem !important;
+//     }
+
+//     .bottom-main {
+//         display: block !important;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a {
+//         font-size: 12px;
+//         font-weight: 400;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt {
+//         margin-top: -8px;
+//     }
+// }
+
+// @media (min-width:378px) and (max-width: 435px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 520px !important;
+//     }
+
+//     .mid-section-5 {
+//         margin-right: 0;
+//         margin: 5px;
+//     }
+
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//     }
+
+//     .mid-sidebar-section-4 {
+//         display: none !important;
+//     }
+
+//     .mid-left-section-1 {
+//         display: none;
+//     }
+
+//     .mid-section-5 {
+//         display: grid;
+//         grid-template-columns: 1fr !important;
+//     }
+
+//     .hide-2 {
+//         display: none !important;
+//     }
+
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 10px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 0.6rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 12px;
+//     }
+
+//     .btns button {
+//         font-size: 0.6rem;
+//     }
+
+//     .top-left-general {
+//         display: none !important;
+//     }
+
+//     .msg-inner-section img {
+//         width: 40px;
+//         height: 40px;
+//     }
+
+//     .msg-desc {
+//         padding-top: 1px;
+//     }
+
+//     .container-top-bar .input-field {
+//         width: 12rem !important;
+//     }
+
+//     .menu-operations span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .bottom-operations-inner span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .send-btn span i {
+//         font-size: 14px;
+//     }
+
+//     .send-btn span i {
+//         padding-left: -20px !important;
+//     }
+
+//     .acc-name p {
+//         font-size: 14px;
+//         padding-bottom: 0;
+//         margin-bottom: 3px;
+//     }
+
+//     .right-top .modal-btn-general {
+//         font-size: 1rem !important;
+//     }
+
+//     .bottom-main {
+//         display: block !important;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a {
+//         font-size: 12px;
+//         font-weight: 400;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt {
+//         margin-top: -8px;
+//     }
+// }
+
+// @media only screen and (max-width: 377px) {
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//         height: 340px !important;
+//     }
+
+//     .mid-section-5 {
+//         margin-right: 0;
+//         margin: 5px;
+//     }
+
+//     .scrollable-content {
+//         flex: 1;
+//         overflow-y: auto;
+//     }
+
+//     .mid-sidebar-section-4 {
+//         display: none !important;
+//     }
+
+//     .mid-left-section-1 {
+//         display: none;
+//     }
+
+//     .mid-section-5 {
+//         display: grid;
+//         grid-template-columns: 1fr !important;
+//     }
+
+//     .hide-2 {
+//         display: none !important;
+//     }
+
+//     .channels a {
+//         font-size: 13px;
+//         font-weight: 600;
+//     }
+
+//     .channel-inner-section h1 {
+//         font-size: 1rem;
+//     }
+
+//     .channel-inner-section h1 span .fa-bullhorn {
+//         font-size: 1rem;
+//     }
+
+//     .channel-inner-section p {
+//         font-size: 10px;
+//     }
+
+//     .msg-desc-top p {
+//         font-size: 0.6rem;
+//     }
+
+//     .msg-desc p {
+//         font-size: 12px;
+//     }
+
+//     .btns button,
+//     .btns button i {
+//         font-size: 0.5rem;
+//     }
+
+//     .btns1 button,
+//     .btns1 button i {
+//         font-size: 0.5rem;
+//     }
+
+//     .top-left-general {
+//         display: none !important;
+//     }
+
+//     .msg-inner-section img {
+//         width: 40px;
+//         height: 40px;
+//     }
+
+//     .msg-desc {
+//         padding-top: 1px;
+//     }
+
+//     .container-top-bar .input-field {
+//         width: 12rem !important;
+//     }
+
+//     .menu-operations span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .bottom-operations-inner span i {
+//         font-size: 14px;
+//         cursor: pointer;
+//     }
+
+//     .send-btn span i {
+//         font-size: 14px;
+//     }
+
+//     .send-btn span i {
+//         padding-left: -20px !important;
+//     }
+
+//     .acc-name p {
+//         font-size: 14px;
+//         padding-bottom: 0;
+//         margin-bottom: 3px;
+//     }
+
+//     .right-top .modal-btn-general {
+//         font-size: 1rem !important;
+//     }
+
+//     .bottom-main {
+//         display: block !important;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a {
+//         font-size: 12px;
+//         font-weight: 400;
+//     }
+
+//     .bottom-main .bt-navbar .bt-inner .bt-navlink a .bt-txt {
+//         margin-top: -8px;
+//     }
+// }

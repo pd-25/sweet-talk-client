@@ -1066,8 +1066,17 @@ i {
 
 .reply-box {
     margin-top: 0.5rem;
+    // overflow: hidden !important;
+}
+.reply-box .ql-editor {
+    border-color: white;
+    outline: none;
+    // overflow: hidden !important;
 }
 
+// .reply-box.focus .ql-editor {
+//     border-color: #007bff; // Set the border color to the desired color when focused
+// }
 .reply-box input {
     background: transparent;
     width: 100%;
@@ -1081,10 +1090,11 @@ i {
 
 .reply-section-inner {
     padding: 10px;
+    
 }
 
 .reply-section-bottom-operations {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
 }
 
 /* right side ------------------------------------------------------------------------->*/
@@ -1221,8 +1231,15 @@ i {
         }
     }
 }
-
-.menu-operations span i {
+.menu-operations .btn{
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.menu-operations .btn i {
+    font-size: 15px;
+ 
     cursor: pointer;
 
     @include mobile-app {

@@ -1,15 +1,17 @@
-// import React from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
+import profile from '../../../assets/bl-profile.webp';
 import '../mainapp/MainApp.scss';
 
 const LeftSection = () => {
     return (
         <div className="mid-left-section-1">
             {/* <!-- left-section start --> */}
-            <div className="left-side" style={{backgroundColor: "#131618"}}>
+            <div className="left-side" style={{ backgroundColor: "#131618" }}>
 
                 <div className="left-top d-flex p-2 gap-2 justify-content-between">
                     <div className="acc-name dropdown d-flex justify-content-between">
-                        <p style={{border: 'none', fontWeight: '600'}}>
+                        <p style={{ border: 'none', fontWeight: '600' }}>
                             SaklinTesting
                         </p>
                     </div>
@@ -19,30 +21,47 @@ const LeftSection = () => {
                     <div className="lb-top d-flex">
 
                         <div className="channels dropdown">
-                            <a style={{border: 'none'}} className="btn dropdown-toggle text-white" type="button"
+                            <a style={{ border: 'none' }} className="btn dropdown-toggle text-white" type="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                             </a>
                         </div>
 
                         <div className="channel-heading">
                             <div className="channels dropdown d">
-                                <a style={{border: 'none', color: 'rgb(185, 186, 189)'}}>
+                                <a style={{ border: 'none', color: 'rgb(185, 186, 189)' }}>
                                     &nbsp;Channels
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <ul className="mid channels nav-link" style={{lineHeight: '7px', marginLeft:'0.2rem'}}>
-                        <p><a href="#"><i className="fa-solid fa-hashtag"></i> general</a></p>
-                        <p><a href="#"><i className="fa-solid fa-hashtag"></i> random</a></p>
+                    <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '0.2rem' }}>
+                        <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> general</Link></p>
+                        <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
+
+
+                        <button style={{ fontSize: '14px' }} type="button" className="btn d-flex mt-2" data-bs-toggle="modal" data-bs-target="#add-channel-btn">
+                                <p><a href="#"><i className="fa-solid fa-plus"></i> Add <span className="hide-2"
+                                    style={{ opacity: '0.7', fontWeight:'400' }}>channel</span></a></p>
+                            </button>
+
+                            {/* <!-- Modal --> */}
+                            <div className="modal fade" id="add-channel-btn" tabIndex="-1" aria-labelledby="add-channel-btn-label" aria-hidden="true">
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-body">
+                                            ...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </ul>
 
                     <div className="mid DMs">
                         <div className="lb-mid-top d-flex">
 
                             <div className="channels dropdown">
-                                <a style={{border: 'none'}} className="btn dropdown-toggle text-white" type="button"
+                                <a style={{ border: 'none' }} className="btn dropdown-toggle text-white" type="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                 </a>
                                 {/* <!-- <ul className="dropdown-menu bg-dark">
@@ -54,27 +73,27 @@ const LeftSection = () => {
 
                             <div className="channel-heading">
                                 <div className="channels dropdown d">
-                                    <a style={{border: 'none', color:'rgb(185, 186, 189)'}}>
+                                    <a style={{ border: 'none', color: 'rgb(185, 186, 189)' }}>
                                         &nbsp;Direct messages
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <ul className="mid channels nav-link" style={{lineHeight: '25px'}}>
+                    <ul className="mid channels nav-link" style={{ lineHeight: '25px' }}>
 
-                        <div className="dms-main">
-                            <div className="sub-dms">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
+                        <div className="dms-main" style={{ cursor: 'pointer' }}>
+                            <p className='m-0'><Link to='/direct-chat-app' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
                                 <span className="px-2">Animallo</span>
-                            </div>
+                            </Link></p>
 
-                            <div className="sub-dms">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
+                            <p className='m-0'><Link to='/direct-chat-app' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
                                 <span className="px-2">Rohit S</span>
-                            </div>
+                            </Link></p>
 
                             {/* <!-- <div className="sub-dms">
                                     <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
@@ -84,8 +103,23 @@ const LeftSection = () => {
                         </div>
 
                         <div className="add-colleagues">
-                            <p><a href="#"><i className="fa-solid fa-plus"></i> &nbsp;Add <span className="hide-2"
-                                style={{opacity:'0.7'}}>colleagues</span></a></p>
+
+                            <button style={{ fontSize: '14px' }} type="button" className="btn d-flex mt-2" data-bs-toggle="modal" data-bs-target="#add-coworker-btn">
+                                <p><a href="#"><i className="fa-solid fa-plus pt-1"></i> Add <span className="hide-2"
+                                    style={{ opacity: '0.7', fontWeight:'400' }}>colleagues</span></a></p>
+                            </button>
+
+                            {/* <!-- Modal --> */}
+                            <div className="modal fade" id="add-coworker-btn" tabIndex="-1" aria-labelledby="add-coworker-btn-label" aria-hidden="true">
+                                <div className="modal-dialog modal-dialog-centered">
+                                    <div className="modal-content">
+                                        <div className="modal-body">
+                                            ...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                     </ul>

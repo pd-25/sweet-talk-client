@@ -1,5 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
+import profile from '../../../assets/bl-profile.webp';
 import './Common.scss';
 import './Step3.scss';
 
@@ -137,7 +138,7 @@ const Step3 = () => {
 
                             <div className="dms-main" style={{ marginTop: '-0.5rem' }}>
                                 <div className="sub-dms">
-                                    <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
+                                    <img src={profile} alt="hugenerd" width="26" height="26"
                                         className="rounded" />
                                     <span className="px-2">Animallo</span>
                                 </div>

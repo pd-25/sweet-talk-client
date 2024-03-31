@@ -39,7 +39,7 @@ const RightSection = () => {
             eqEditor.style.height = `${eqEditor.offsetHeight - 10}px`;
         }
     };
-    
+
 
 
 
@@ -152,9 +152,9 @@ const RightSection = () => {
             selection.removeAllRanges();
             selection.addRange(range);
             e.preventDefault();
-            
+
         }
-        else if (e.ctrlKey && e.key === 'Enter'){
+        else if (e.ctrlKey && e.key === 'Enter') {
             increaseEditorHeight();
         }
         else if (e.ctrlKey && e.key === 'Backspace') {
@@ -175,8 +175,7 @@ const RightSection = () => {
                     {/* <!-- Button trigger modal --> */}
                     <a type="button" className="btn modal-btn-general text-white" data-bs-toggle="modal" data-bs-target="#exampleModal"
                         style={{ fontWeight: '600', fontSize: '1.1rem' }}>
-                        <i className="fa-solid fa-hashtag"></i> general <i
-                            className="fa-solid fa-caret-down text-white"></i>
+                        <img src={profile} alt="" width={32} className='rounded' />&nbsp;Animallo <i className="fa-solid fa-caret-down text-white"></i>
                     </a>
 
                     {/* <!-- Modal --> */}
@@ -220,35 +219,6 @@ const RightSection = () => {
                             </div>
                         </div>
 
-
-
-                        <div className="user-top-count">
-                            <span><i className="fa-solid fa-user text-dark"></i></span>
-                            <span><i className="fa-solid fa-user text-dark"></i></span>
-                            <span className="count">3</span>
-                        </div>
-
-                        <div className="huddle-top">
-                            <div className="btn btn-huddle">
-                                <a className="btn text-white btn-sm" type="button">
-                                    <i className="fa-solid fa-headphones-simple" style={{ fontSize: '1rem' }}></i><span style={{ fontSize: '1rem', padding: '5px' }}>Huddle</span>
-                                </a>
-                                <a type="button"
-                                    className="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span className="visually-hidden"></span>
-                                </a>
-                                <ul className="dropdown-menu bg-dark p-2">
-                                    <li><a href="#" className="text-white"><i className="fa-solid fa-headphones-simple"></i>
-                                        &nbsp;Start
-                                        huddle</a></li>
-                                    <li><a href="#" className="text-white"><i className="fa-solid fa-link"></i>
-                                        &nbsp;Copy huddle link</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
                         <div className="huddle-top">
                             <div className="btn btn-canvas">
                                 <button className="btn text-white btn-sm" type="button">
@@ -264,7 +234,7 @@ const RightSection = () => {
                 {/* <!-- bookmarks add start--> */}
                 <div className="bookmark-main stick-top">
                     <div className="bookmark-inner">
-                        <span><i className="fa-solid fa-plus"></i>&nbsp;Add a bookmark</span>
+                        <span style={{ opacity: '0.8' }}><i className="fa-solid fa-plus"></i>&nbsp;Add a bookmark</span>
                     </div>
                     <hr />
                 </div>
@@ -278,104 +248,49 @@ const RightSection = () => {
                 <div className="scrollable-content">
                     {/* <!-- channel-something-section start --> */}
                     <div className="channel-inner-section px-2">
-                        <h1>
-                            <span><i className="fa-solid fa-bullhorn"></i></span>
-                            &nbsp;You’re looking at the&nbsp;
-                            <span>
-                                <i className="fa-solid fa-hashtag"></i>general
-                            </span>
-                        </h1>
-                        <p>This is the one channel that will always include everyone. It’s a great spot htmlFor
-                            announcements and team-wide conversations.</p>
-                        <p className="edit-desc"><a className="text-primary" href="#">Edit description</a></p>
+                        <div className="profile-view-directchat-inner p-5 pb-0 pt-3">
+                            <div className="profile-direct-chat d-flex align-items-center mt-3 gap-3">
+                                <div className="img-prof">
+                                    <img className="rounded" src={profile} alt="" width="120px" height="120px" />
+                                </div>
+                                <div className="direct-chat-name">
+                                    <h2>Animallo</h2>
+                                </div>
+                            </div>
+
+                            <div className="direct-chat-prof-desc mt-2">
+                                <p style={{ opacity: '0.8', fontSize:'0.9rem' }}><span style={{ opacity: '0.8' }} className="msg-desc-bottom-inner">@animallo</span> hasn’t signed in yet, but they will receive messages via email until they do.</p>
+                            </div>
 
 
-
-                        <div className="btns">
-                            {/* <!-- modals for add colleagues start --> */}
-                            {/* <!-- Button trigger modal --> */}
+                            <div className="profile-view-button-main">
                             <button type="button" className="btn" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal1">
-                                <i className="fa-solid fa-user-plus"></i>&nbsp;Add colleagues
+                                data-bs-target="#profile-view-btn">
+                                View Profile
                             </button>
 
                             {/* <!-- Modal --> */}
-                            <div className="modal fade" id="exampleModal1" tabIndex="-1"
+                            <div className="modal fade" id="profile-view-btn" tabIndex="-1"
                                 aria-labelledby="exampleModalLabel1" aria-hidden="true">
                                 <div className="modal-dialog modal-dialog-centered modal-lg">
                                     <div className="modal-content">
-                                        <div className="modal-header">
-                                            <h2 className="modal-title" id="exampleModalLabel1">
-                                                Add people to&nbsp;
-                                                <span>
-                                                    <i className="fa-solid fa-hashtag"></i> general
-                                                </span>
-                                            </h2>
-                                            <button type="button" className="btn-close border-0" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                        </div>
                                         <div className="modal-body">
-                                            <input type="text" name="colleague" id="colleague"
-                                                placeholder="e.g. Nathalie, ou james@a1saklin.com" />
-                                        </div>
-                                        <div className="modal-footer">
-                                            <button type="button" className="btn border-0">Add</button>
+                                            ....
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            {/* <!-- modals htmlFor add colleagues end --> */}
-
-                            <div className="btns1">
-                                {/* <!-- modals for Forward email start --> */}
-                                {/* <!-- Button trigger modal --> */}
-                                <button type="button" className="btn btn-modal" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModalF">
-                                    <i className="fa-solid fa-envelope-circle-check"></i>&nbsp; Forward emails to
-                                    this
-                                    channel
-                                </button>
-
-                                {/* <!-- Modal --> */}
-                                <div className="modal fade" id="exampleModalF" tabIndex="-1"
-                                    aria-labelledby="exampleModalLabel3" aria-hidden="true">
-                                    <div className="modal-dialog modal-dialog-centered modal-lg">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-
-                                                <h3 className="modal-title" id="exampleModalLabel3">
-                                                    Send emails to #general<span className="pro">PRO</span>
-                                                </h3>
-
-                                                <button type="button" className="btn-close border-0"
-                                                    data-bs-dismiss="modal" aria-label="Close">
-                                                </button>
-
-                                            </div>
-                                            <div className="modal-body">
-                                                <p>Emails sent to this email address will be posted in the
-                                                    #general
-                                                    channel.</p>
-                                                <p className="how-to"><a className="text-primary" href="#">How to use
-                                                    this
-                                                    address</a>.</p>
-                                            </div>
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-success">Get email
-                                                    address</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* <!-- modals htmlFor Forward email end --> */}
                             </div>
+
                         </div>
+
+
                     </div>
                     {/* <!-- channel-something-section end --> */}
 
-                    <hr />
+                    {/* <hr /> */}
                     {/* <!-- add/join msg-section-start --> */}
-                    <div className="msg-section px-2">
+                    {/* <div className="msg-section px-2">
                         <div className="msg-inner-section d-flex gap-2">
                             <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50"
                                 className="rounded" />
@@ -388,7 +303,7 @@ const RightSection = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <!-- add/join msg-section-end --> */}
 
                     {/* <!-- actual msg section start --> */}
@@ -500,26 +415,8 @@ const RightSection = () => {
                             </div>
                         </div>
 
-                        <div className="msg-section px-2 pt-2">
-                            <div className="msg-inner-section d-flex gap-2">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50"
-                                    className="rounded" />
-                                <div className="msg-desc">
-                                    <div className="msg-desc-top d-flex gap-2">
-                                        <p>Saklin Wind</p>
-                                        <span>9:30 PM , 10.03.24</span>
-                                    </div>
-                                    <p className="msg-desc-bottom">
-                                        <span className="msg-desc-bottom-outer">
-                                            <span className="msg-desc-bottom-inner">
-                                                <a href="#">@pradiptabhuin</a>
-                                            </span>
-                                            &nbsp;Ok.
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+      
+
 
                         <div className="msg-section px-2 pt-2">
                             <div className="msg-inner-section d-flex gap-2">
@@ -532,57 +429,14 @@ const RightSection = () => {
                                     </div>
                                     <p className="msg-desc-bottom">
                                         <span className="msg-desc-bottom-outer">
-                                            <span className="msg-desc-bottom-inner">
-                                                <a href="#">@pradiptabhuin</a>
-                                            </span>
-                                            &nbsp;Ok.
+                                            Let's do it.
                                         </span>
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="msg-section px-2 pt-2">
-                            <div className="msg-inner-section d-flex gap-2">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50"
-                                    className="rounded" />
-                                <div className="msg-desc">
-                                    <div className="msg-desc-top d-flex gap-2">
-                                        <p>Saklin Wind</p>
-                                        <span>9:30 PM , 10.03.24</span>
-                                    </div>
-                                    <p className="msg-desc-bottom">
-                                        <span className="msg-desc-bottom-outer">
-                                            <span className="msg-desc-bottom-inner">
-                                                <a href="#">@pradiptabhuin</a>
-                                            </span>
-                                            &nbsp;Ok.
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="msg-section px-2 pt-2">
-                            <div className="msg-inner-section d-flex gap-2">
-                                <img src="https://github.com/mdo.png" alt="hugenerd" width="50" height="50"
-                                    className="rounded" />
-                                <div className="msg-desc">
-                                    <div className="msg-desc-top d-flex gap-2">
-                                        <p>Saklin Wind</p>
-                                        <span>9:30 PM , 10.03.24</span>
-                                    </div>
-                                    <p className="msg-desc-bottom">
-                                        <span className="msg-desc-bottom-outer">
-                                            <span className="msg-desc-bottom-inner">
-                                                <a href="#">@pradiptabhuin</a>
-                                            </span>
-                                            &nbsp;Ok.
-                                        </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     {/* <!-- actual msg section end --> */}
                 </div>

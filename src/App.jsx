@@ -15,6 +15,7 @@ import Step4 from './components/website/creationsteps/Step4';
 import Step5 from './components/website/creationsteps/Step5';
 import MainApp from './components/application/mainapp/MainApp';
 import TalkTous from './components/website/talktous/TalkTous';
+import DirectChat from './components/application/directchatapp/DirectChat';
 import Test from './components/unittest/Test';
 // import Test2 from './components/unittest/Test2';
 
@@ -93,6 +94,10 @@ function App() {
     {
       path: '/app',
       element: <MainApp />,
+    },
+    {
+      path: '/direct-chat-app',
+      element: <DirectChat />,
     },
     {
       path: '/test',

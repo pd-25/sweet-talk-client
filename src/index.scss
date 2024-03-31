@@ -90,6 +90,12 @@ body{
 .gr {
   background: linear-gradient(to right, #e2062e, #0b5adb);
 }
+.gr-col {
+  background: -webkit-linear-gradient(to right, #e2062e, #0b5adb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
 
 .sol {
   color: #e2062e;

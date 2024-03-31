@@ -1,5 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
+import profile from '../../../assets/bl-profile.webp';
 import './Common.scss';
 import './Step5.scss';
 // import '../../application/mainApp/MainApp.scss'
@@ -149,7 +150,7 @@ const Step5 = () => {
 
                 <div className="dms-main" style={{ marginTop: '-0.8rem' }}>
                   <div className="sub-dms">
-                    <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
+                    <img src={profile} alt="hugenerd" width="26" height="26"
                       className="rounded" />
                     <span className="px-2">Animallo</span>
                   </div>
@@ -214,7 +215,7 @@ const Step5 = () => {
                     </div>
 
                     <div className="btn-400 rounded">
-                      <Link to="/app" className="btn btn-nav">Start With Free</Link>
+                      <Link to="/app" className="btn">Start With Free</Link>
                     </div>
 
                     <ul className="lists-0 pt-3" style={{ opacity: '0.9' }}>
@@ -241,7 +242,7 @@ const Step5 = () => {
                     </div>
 
                     <div className="btn-400 pro rounded gr">
-                      <a href="#" className="btn btn-nav">Upgrade to Pro</a>
+                      <a href="#" className="btn">Upgrade to Pro</a>
                     </div>
 
                     <ul className="lists pt-3" style={{ opacity: '0.9' }} type="none">

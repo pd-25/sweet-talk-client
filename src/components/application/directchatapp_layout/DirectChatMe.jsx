@@ -3,10 +3,10 @@ import '../mainapp/MainApp.scss';
 import Topbar from '../topbar/Topbar';
 import Sidebar from '../sidebar/Sidebar';
 import LeftSection from '../leftsection/LeftSection';
-import DirectChatRightSection from '../direct_chat_rightsection/DirectChatRightSection';
+import DMRightSectionMe from '../direct_chat_rightsection_me/DMRightSectionMe';
 import BootomNavbar from '../bottomnavbar/BootomNavbar';
 
-const DirectChat = () => {
+const DirectChatMe = () => {
     return (
         <div className='Main'>
             <Topbar />
@@ -25,7 +25,7 @@ const DirectChat = () => {
 
 
                 {/* right section start */}
-                <DirectChatRightSection />
+                <DMRightSectionMe />
                 {/* right section end */}
             </div>
 
@@ -39,4 +39,4 @@ const DirectChat = () => {
     )
 }
 
-export default DirectChat
+export default DirectChatMe

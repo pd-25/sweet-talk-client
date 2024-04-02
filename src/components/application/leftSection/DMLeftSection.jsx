@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import profile from '../../assets/bl-profile.webp';
-import '../../components/application/mainapp/MainApp.scss';
+import profile from '../../../assets/bl-profile.webp';
+import '../mainapp/MainApp.scss';
+import './DMLeftSection.scss';
 
-const LeftSection = () => {
-    return (
-        <div className="mid-left-section-1">
+const DMLeftSection = () => {
+  return (
+    <div className="mid-left-section-1">
             {/* <!-- left-section start --> */}
             <div className="left-side" style={{ backgroundColor: "#131618" }}>
 
@@ -73,8 +74,7 @@ const LeftSection = () => {
             </div>
             {/* <!-- left-section end --> */}
         </div>
-
-    )
+  )
 }
 
-export default LeftSection
+export default DMLeftSection

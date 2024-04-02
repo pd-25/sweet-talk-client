@@ -1,5 +1,6 @@
 // import React from 'react'
 import '../mainapp/MainApp.scss';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -18,7 +19,7 @@ const Sidebar = () => {
                         </li>
 
                         <li className="nav-item w-100">
-                            <a href="#" className="nav-link align-middle px-0 text-white">
+                            <Link to='/app'  className="nav-link align-middle px-0 text-white">
                                 <div className="text-center">
                                     <i className="fa-solid fa-house px-2 py-2 rounded"
                                         style={{backgroundColor: "rgba(210, 210, 210, 0.432)"}}></i>
@@ -26,11 +27,11 @@ const Sidebar = () => {
                                 <div className="text-center">
                                     <span className="ms-1 d-none d-sm-inline">Home</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item w-100">
-                            <a href="#submenu1" data-bs-toggle="collapse"
+                            <Link to='/only-dm'
                                 className="nav-link px-0 align-middle  text-white">
                                 <div className="text-center">
                                     <i className="fa-regular fa-comments"></i>
@@ -38,7 +39,7 @@ const Sidebar = () => {
                                 <div className="text-center">
                                     <span className="ms-1 d-none d-sm-inline">DMs</span>
                                 </div>
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item w-100">

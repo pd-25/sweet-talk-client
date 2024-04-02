@@ -15,7 +15,11 @@ import Step4 from './components/website/creationsteps/Step4';
 import Step5 from './components/website/creationsteps/Step5';
 import MainApp from './components/application/mainapp/MainApp';
 import TalkTous from './components/website/talktous/TalkTous';
-import DirectChat from './components/application/directchatapp/DirectChat';
+import DirectChatMe from './components/application/directchatapp_layout/DirectChatMe';
+import DirectChatFriend from './components/application/directchatapp_layout/DirectChatFriend';
+import OnlyDMLayout from './components/application/directchatapp_layout/OnlyDMLayout';
+
+
 import Test from './components/unittest/Test';
 // import Test2 from './components/unittest/Test2';
 
@@ -96,17 +100,25 @@ function App() {
       element: <MainApp />,
     },
     {
-      path: '/direct-chat-app',
-      element: <DirectChat />,
+      path: '/direct-chat-app-with-me',
+      element: <DirectChatMe />,
     },
+    {
+      path: '/direct-chat-app-with-friend',
+      element: <DirectChatFriend />,
+    },
+    {
+      path: '/only-dm',
+      element: <OnlyDMLayout />,
+    },
+
+
+
+
     {
       path: '/test',
       element: <Test />,
     },
-    // {
-    //   path: '/test2',
-    //   element: <Test2 />,
-    // },
   ]);
 
   return <RouterProvider router={routerConfig} />;

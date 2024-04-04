@@ -585,7 +585,7 @@ const RightSection = () => {
 
                 {/* <!-- to type any msg / reply section start --> */}
                 <div className="reply-section-main bg-dark">
-                    <div className="reply-section-inner">
+                    <div className="reply-section-inner p-1">
 
                         {!isMenuHidden && (
                             <div className="menu-operations d-flex align-items-center">

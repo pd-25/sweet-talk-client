@@ -4,7 +4,7 @@ import Topbar from '../topbar/Topbar';
 import Sidebar from '../sidebar/Sidebar';
 import DMLeftSection from '../leftsection/DMLeftSection';
 import DMRightSectionMe from '../direct_chat_rightsection_me/DMRightSectionMe';
-import BootomNavbar from '../bottomnavbar/BootomNavbar';
+import BootomNavbar from '../bottomnavbar/BottomNavbar';
 
 const OnlyDMLayout = () => {
   return (

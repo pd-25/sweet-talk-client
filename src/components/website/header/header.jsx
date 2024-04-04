@@ -7,7 +7,7 @@ const Header = () => {
        {/* <!-- navbar start --> */}
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
             <div className="container-fluid text-white">
-                <a className="navbar-brand text-white" href="#">LOGO</a>
+                <NavLink className="navbar-brand text-white" to="/">LOGO</NavLink>
                 <a className="navbar-toggler gr" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

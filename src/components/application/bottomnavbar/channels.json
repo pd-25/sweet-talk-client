@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "type": "public",
+        "name": "Public Channel 1",
+        "members": 30
+    },
+    {
+        "id": 2,
+        "type": "public",
+        "name": "Public Channel 2",
+        "members": 30
+    },
+    {
+        "id": 3,
+        "type": "public",
+        "name": "Public Channel 3",
+        "members": 30
+    },
+    {
+        "id": 4,
+        "type": "public",
+        "name": "Public Channel 4",
+        "members": 30
+    },
+    {
+        "id": 5,
+        "type": "public",
+        "name": "Public Channel 5",
+        "members": 30
+    },
+    {
+        "id": 6,
+        "type": "public",
+        "name": "Public Channel 6",
+        "members": 25
+    },
+    {
+        "id": 7,
+        "type": "private",
+        "name": "Private Channel 1",
+        "members": 15
+    },
+    {
+        "id": 8,
+        "type": "private",
+        "name": "Private Channel 2",
+        "members": 15
+    },
+    {
+        "id": 9,
+        "type": "private",
+        "name": "Private Channel 3",
+        "members": 15
+    },
+    {
+        "id": 10,
+        "type": "private",
+        "name": "Private Channel 4",
+        "members": 20
+    }
+]

@@ -4,7 +4,7 @@ import Topbar from '../topbar/Topbar'
 import Sidebar from '../sidebar/Sidebar'
 import LeftSection from '../leftsection/LeftSection'
 import DMRightSectionFriend from '../direct_chat_rightsection_friend/DMRightSectionFriend'
-import BootomNavbar from '../bottomnavbar/BootomNavbar'
+import BootomNavbar from '../bottomnavbar/BottomNavbar'
 
 const DirectChatFriend = () => {
   return (

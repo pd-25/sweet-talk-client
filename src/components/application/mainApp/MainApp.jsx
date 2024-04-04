@@ -4,7 +4,7 @@ import Topbar from '../topbar/Topbar';
 import Sidebar from '../sidebar/Sidebar';
 import LeftSection from '../leftsection/LeftSection';
 import RightSection from '../rightsection/RightSection';
-import BootomNavbar from '../bottomnavbar/BootomNavbar';
+import BootomNavbar from '../bottomnavbar/BottomNavbar';
 
 const MainApp = () => {
     return (

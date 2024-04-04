@@ -166,7 +166,7 @@ const DMRightSectionMe = () => {
 
 
     return (
-        <div className="mid-right-section-3" style={{ overflowY: 'hidden' }}>
+        <div className="mid-right-section-3" id='right-me' style={{ overflowY: 'hidden' }}>
             <div className="right-side-1" style={{ overflowY: 'hidden' }}>
 
 
@@ -242,7 +242,7 @@ const DMRightSectionMe = () => {
                     {/* <!-- channel-something-section start --> */}
                     <div className="channel-inner-section px-2">
                         <div className="profile-view-directchat-inner p-5 pb-0 pt-3">
-                            <div className="profile-direct-chat d-flex align-items-center mt-3 gap-3 flex-column" style={{width:'fit-content'}}>
+                            <div className="profile-direct-chat d-flex align-items-center mt-3 gap-3 flex-column" style={{ width: 'fit-content' }}>
                                 <div className="img-prof">
                                     <img className="rounded" src={profile} alt="" width="120px" height="120px" />
                                 </div>
@@ -651,7 +651,7 @@ const DMRightSectionMe = () => {
 
                 {/* <!-- to type any msg / reply section start --> */}
                 <div className="reply-section-main bg-dark">
-                    <div className="reply-section-inner">
+                    <div className="reply-section-inner p-1">
 
                         {!isMenuHidden && (
                             <div className="menu-operations d-flex align-items-center">

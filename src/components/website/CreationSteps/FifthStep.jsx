@@ -2,10 +2,10 @@
 import { Link } from 'react-router-dom';
 import profile from '../../../assets/bl-profile.webp';
 import './Common.scss';
-import './Step5.scss';
+import './FifthStep.scss';
 // import '../../application/mainApp/MainApp.scss'
 
-const Step5 = () => {
+const FifthStep = () => {
   return (
     <div className='Main'>
       <div className="mid-section-400 mt-5">
@@ -264,4 +264,4 @@ const Step5 = () => {
   )
 }
 
-export default Step5
+export default FifthStep

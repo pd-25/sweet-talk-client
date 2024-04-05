@@ -2,9 +2,9 @@
 import { Link } from 'react-router-dom';
 import profile from '../../../assets/bl-profile.webp';
 import './Common.scss';
-import './Step3.scss';
+import './ThirdStep.scss';
 
-const Step3 = () => {
+const ThirdStep = () => {
     return (
         <div className='Main'>
             <div className="mid-section-200 mt-5">
@@ -189,10 +189,10 @@ const Step3 = () => {
 
                                     <div className="btns-2">
                                         <div className="btn-14 btn  mt-2 gr" style={{ padding: '4px' }}>
-                                            <Link to="/step4" className="btn cw">Next</Link>
+                                            <Link to="/step-four" className="btn cw">Next</Link>
                                         </div>
                                         <div className="btn-14 btn mt-2 gr" style={{ padding: '4px' }}>
-                                            <Link to="/step4" className="btn cw">Skip this step</Link>
+                                            <Link to="/step-four" className="btn cw">Skip this step</Link>
                                         </div>
                                     </div>
                                 </form>
@@ -208,4 +208,4 @@ const Step3 = () => {
     )
 }
 
-export default Step3
+export default ThirdStep

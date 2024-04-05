@@ -1,20 +1,27 @@
-// import React from 'react'
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import './Common.scss';
-import './Step2.scss';
-import BlackProfile from '../../../assets/bl-profile.webp'
+import './ForthStep.scss';
 
-const Step2 = () => {
+const ForthStep = () => {
     return (
         <div className='Main'>
-            <div className="mid-section-10 mt-5">
+            <div className="mid-section-300 mt-5">
 
                 {/* <!-- sidebar start --> */}
-                <div className="mid-sidebar-section-10">
+                <div className="mid-sidebar-section-300">
                     <div className="inner-sidebar d-flex flex-column align-items-center align-items-sm-start text-white">
 
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100"
                             id="menu" style={{ fontSize: '12px' }}>
+
+                            <li className="nav-item w-100 pb-3 pt-3">
+                                <a href="#"
+                                    className="d-flex align-items-center text-white text-decoration-none justify-content-center">
+                                    <img src="https://github.com/mdo.png" alt="hugenerd" width="36" height="34"
+                                        className="rounded" />
+                                </a>
+                            </li>
 
                             <li className="nav-item w-100">
                                 <a href="#" className="nav-link align-middle px-0 text-white">
@@ -78,40 +85,40 @@ const Step2 = () => {
 
 
                 {/* <!-- left side start --> */}
-                <div className="mid-left-section-100">
+                <div className="mid-left-section-300">
                     {/* <!-- left-section start --> */}
                     <div className="left-side h-100" style={{ backgroundColor: '#131618' }}>
 
                         <div className="left-top d-flex p-2 gap-2 justify-content-between">
                             <div className="acc-name dropdown d-flex justify-content-between mt-2">
-                                <p style={{ border: 'none', fontWeight: "600" }}>
-                                    Saklinm5333
+                                <p style={{ border: 'none', fontWeight: 600 }}>
+                                    SaklinTesting
                                 </p>
                             </div>
                         </div>
 
                         <div className="bottom-mid">
-                            {/* <!-- <div className="lb-top d-flex">
+                            <div className="lb-top d-flex">
 
-                <div className="channels dropdown">
-                    <a style="border: none;" className="btn dropdown-toggle text-white" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                    </a>
-                </div>
+                                <div className="channels dropdown">
+                                    <a style={{ border: 'none' }} className="btn dropdown-toggle text-white" type="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                    </a>
+                                </div>
 
-                <div className="channel-heading">
-                    <div className="channels dropdown">
-                        <a style="border: none;color: rgb(185, 186, 189);">
-                            &nbsp;Channels
-                        </a>
-                    </div>
-                </div>
-            </div>
+                                <div className="channel-heading">
+                                    <div className="channels dropdown" style={{ marginLeft: '-28%', marginTop: '16%' }}>
+                                        <a style={{ border: 'none', color: 'rgb(185, 186, 189)' }}>
+                                            &nbsp;Channels
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
-            <ul className="mid channels nav-link" style="line-height: 7px; margin-left: 0.2rem;">
-                <p><a href="#"><i className="fa-solid fa-hashtag"></i> general</a></p>
-                <p><a href="#"><i className="fa-solid fa-hashtag"></i> random</a></p>
-            </ul> --> */}
+                            <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '1rem' }}>
+                                <p><a href="#"><i className="fa-solid fa-hashtag"></i> general</a></p>
+                                {/* <!-- <p><a href="#"><i className="fa-solid fa-hashtag"></i> random</a></p> --> */}
+                            </ul>
                         </div>
                     </div>
                     {/* <!-- left-section end --> */}
@@ -120,48 +127,26 @@ const Step2 = () => {
 
 
                 {/* <!-- right side start --> */}
-                <div className="mid-right-section-100">
-                    <div className="right-side-3">
+                <div className="mid-right-section-300">
+                    <div className="right-side">
                         <div className="r-s-main-inner">
-                            <div className="right-inner-side-100">
+                            <div className="right-inner-side-300">
                                 <div className="steps">
-                                    <p>Step 2 of 5</p>
+                                    <p>Step 4 of 5</p>
                                 </div>
                                 <div className="r-heading">
-                                    <h1>What’s your name?</h1>
+                                    <h1>What’s your team working on right now?</h1>
                                 </div>
                                 <div className="r-desc-1">
-                                    <p>Adding your name and profile photo helps your teammates recognize and connect with
-                                        you more easily.</p>
+                                    <p>This could be anything: a project, campaign, event, or the deal you’re trying to close.</p>
                                 </div>
                                 <form action="#">
                                     <input className="inp-1 rounded" type="text" name="comapny-name" id="comapny-name"
-                                        placeholder="Saklinm5333" />
+                                        placeholder="Ex: general" style={{ padding: '14px' }} />
 
-                                    <div className="checks-optional-upload">
-                                        <div className="upload-inner-main">
-                                            <div className="upload-heading pt-2">
-                                                <p>Upload a profile picture <b>(Optional)</b></p>
-                                                <p className="upload-desc-p">Help your teammates know they’re talking to the right person.</p>
-                                            </div>
-                                            <div className="upload-img">
-                                                <div className="upload-img-inner">
-                                                    <img src={BlackProfile} alt="#" className="rounded" />
-
-                                                    <div className="btns-100">
-                                                        <div className="btn-100 btn mt-2 gr" style={{ padding: '4px' }}>
-                                                            <label htmlFor="file-input" style={{ color: 'white', padding: '8px' }}>Upload</label>
-                                                            <input type="file" name="" id="file-input" style={{ display: 'none' }} />
-                                                        </div>
-                                                        <div className="btn-100 btn mt-2 gr" style={{ padding: '4px' }}>
-                                                            <Link to="/step3" className="btn" style={{ color: 'white' }}>Next</Link>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div className="btn-300 btn mt-4 gr" style={{ padding: '4px' }}>
+                                        <Link to="/step-five" className="btn cw" style={{ fontWeight: '600' }}>Next</Link>
                                     </div>
-
                                 </form>
                             </div>
                         </div>
@@ -171,7 +156,7 @@ const Step2 = () => {
 
             </div>
         </div>
-    );
+    )
 }
 
-export default Step2;
+export default ForthStep

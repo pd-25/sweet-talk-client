@@ -43,7 +43,7 @@ const CreateWs = () => {
                                     new workspace, click the button below.</p>
                             </div>
                             <div className="btn11 rounded gr" style={{padding:'4px'}}>
-                                <Link to="/step1" className="btn btn-c text-white">Create a Workspace</Link>
+                                <Link to="/step-one" className="btn btn-c text-white">Create a Workspace</Link>
                             </div>
                             <div className="desc-3">
                                 <p>By continuing, you’re agreeing to our Main Services Agreement, User Terms of Service, and

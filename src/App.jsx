@@ -8,11 +8,11 @@ import Login from './components/website/auth/Login';
 import Signin from './components/website/auth/Signin';
 import Otp from './components/website/auth/Otp';
 import CreateWs from './components/website/creationsteps/CreateWs';
-import Step1 from './components/website/creationsteps/Step1';
-import Step2 from './components/website/creationsteps/Step2';
-import Step3 from './components/website/creationsteps/Step3';
-import Step4 from './components/website/creationsteps/Step4';
-import Step5 from './components/website/creationsteps/Step5';
+import FirstStep from './components/website/creationsteps/FirstStep';
+import SecondStep from './components/website/creationsteps/SecondStep';
+import ThirdStep from './components/website/creationsteps/ThirdStep';
+import ForthStep from './components/website/creationsteps/ForthStep';
+import FifthStep from './components/website/creationsteps/FifthStep';
 import MainApp from './components/application/mainapp/MainApp';
 import TalkTous from './components/website/talktous/TalkTous';
 import DirectChatMe from './components/application/directchatapp_layout/DirectChatMe';
@@ -76,24 +76,24 @@ function App() {
       element: <CreateWs />,
     },
     {
-      path: '/step1',
-      element: <Step1 />,
+      path: '/step-one',
+      element: <FirstStep />,
     },
     {
-      path: '/step2',
-      element: <Step2 />,
+      path: '/step-two',
+      element: <SecondStep />,
     },
     {
-      path: '/step3',
-      element: <Step3 />,
+      path: '/step-three',
+      element: <ThirdStep />,
     },
     {
-      path: '/step4',
-      element: <Step4 />,
+      path: '/step-four',
+      element: <ForthStep />,
     },
     {
-      path: '/step5',
-      element: <Step5 />,
+      path: '/step-five',
+      element: <FifthStep />,
     },
     {
       path: '/app',

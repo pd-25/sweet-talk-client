@@ -43,7 +43,7 @@
             opacity: 0.8;
         }
 
-        .dm-search-content input::placeholder{
+        .dm-search-content input::placeholder {
             font-size: 1rem;
         }
 
@@ -132,7 +132,7 @@
         color: white !important;
     }
 
-    .select-btns-activity {
+    .select-btns-activity .operation-btns-activity {
         display: flex;
         justify-content: start;
         align-items: center;
@@ -456,6 +456,7 @@
                 opacity: 0.8;
                 border: 1px solid #9d9c9c79;
             }
+
             .profile-input::placeholder {
                 font-size: 1rem;
                 opacity: 0.8;
@@ -463,7 +464,7 @@
 
             .display-name-desc {
                 opacity: 0.8;
-                font-size:  11px;
+                font-size: 11px;
                 text-align: left;
             }
         }
@@ -490,4 +491,117 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+}
+
+
+//add dms buttn
+
+.add-btn-dms {
+    font-size: 14px;
+    color: white;
+    float: right !important;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.add-btn-dms i {
+    color: white !important;
+    font-size: 14px;
+}
+
+#add-coworker-btn1 .modal-content {
+    padding: 5%;
+    border: none;
+
+}
+
+#add-coworker-btn1 .modal-body {
+    background: #00000088;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+
+    .add-channel-heading h4 {
+        font-size: 1.6rem;
+    }
+
+    .label-colle {
+        float: left;
+    }
+
+    .send-invites-btn .btn {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+//activity btns add channels
+.add-btn-activity {
+    margin: 0;
+    padding: 0;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.add-btn-activity i {
+    color: white !important;
+    font-size: 14px;
+}
+
+#add-channel-btn1 .modal-content{
+    padding: 5%;
+    border: none;
+}
+
+#add-channel-btn1 .modal-body{
+    background: #00000088;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+    .add-channel-heading h4{
+        font-size: 1.6rem;
+    }
+    .input-channel label{
+        float: left;
+    }
+    .input-channel .add-channel-desc{
+        text-align: left;
+    }
+    .visibility-name h6{
+        text-align: left;
+    }
+    .visibility-name ul{
+        text-align: left;
+    }
+    .visibility-name input::placeholder ,.input-channel input::placeholder{
+        font-size: 1rem;
+    }
+    .visibility-name .inner-ul li{
+        // float: left;
+    }
+    .modal-footer2 .create-channel{
+        padding: 0 !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        font-size: 1rem;
+
+    }
+    
 }

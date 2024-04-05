@@ -47,10 +47,10 @@ function App() {
           path: '/',
           element: isLoggedIn ? <WithLoginHome /> : <WithoutLoginHome />,
         },
-        // {
-        //   path:'/log-home',
-        //   element: <WithLoginHome />,
-        // }
+        {
+          path:'/log-home',
+          element: <WithLoginHome />,
+        },
         {
           path:'/help',
           element: <TalkTous />,

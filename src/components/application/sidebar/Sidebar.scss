@@ -1,0 +1,152 @@
+#dms-btn1 .modal-body-dms {
+    line-height: normal;
+    padding: 3%;
+    padding-top: 1%;
+    margin: 3%;
+
+    .dms-main .dms-main-inner {
+        .btn-bar button {
+            font-size: 18px;
+            float: left;
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .btn-bar button i {
+            font-size: 22px;
+            float: left;
+            font-weight: 600;
+        }
+
+        .btn-bar p {
+            font-size: 18px;
+            float: left;
+            margin: 0;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .dm-search-content {
+            border: 1px solid #78757580;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .dm-search-content input {
+            border: none;
+            background-color: transparent;
+            opacity: 0.8;
+            font-size: 1.1rem;
+        }
+
+        .dm-search-content input::placeholder {
+            font-size: 1.1rem;
+        }
+
+        .dm-search-content i {
+            font-size: 1rem;
+        }
+
+        .small-heading-fixed p {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+            float: left;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+    }
+}
+
+.all-dms-main-scroll{
+    .image-profile-dms{
+        width: 50px;
+        height: 50px;
+    }
+    .name-msg .name-lastdm{
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
+    .name-msg .name-lastdm1{
+        font-size: 14px !important;
+    }
+}
+.all-dms-main-scroll::-webkit-scrollbar {
+    display: none;
+}
+.all-dms-main-scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.add-btn-dms1 {
+    font-size: 1rem;
+    color: white;
+    float: right !important;
+    padding: 0;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+
+#add-coworker-btn11 .modal-content {
+    padding: 5%;
+    border: none;
+
+}
+
+#add-coworker-btn11 .modal-body {
+    background: #00000088;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+
+    .add-channel-heading h4 {
+        font-size: 1.6rem;
+    }
+
+    .label-colle {
+        float: left;
+    }
+    .email-add-colleagues textarea{
+        font-size: 0.8rem;
+    }
+    .email-add-colleagues textarea::placeholder{
+        font-size: 0.8rem;
+    }
+
+    .send-invites-btn .btn {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+//dropDown menu
+.nav-item .fro-profile{
+    background: #21252a;
+    border: 1px solid rgba(146, 140, 140, 0.495);
+    .for-sub-profile a{
+        color: white;
+        opacity: 0.8;
+        font-weight: 500;
+    }
+    .for-sub-profile:hover a{
+        background: #6d6d6dc7 !important;
+    }
+}
+
+
+//profile view dropDown menu itme 
+

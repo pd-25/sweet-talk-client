@@ -1,0 +1,15 @@
+.mid.channels .hide-scroll1::-webkit-scrollbar{
+    display: none;
+}
+.mid.channels .hide-scroll1{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.mid.channels .dms-main::-webkit-scrollbar{
+    display: none;
+}
+.mid.channels .dms-main{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

@@ -16,7 +16,7 @@ const CreateWs = () => {
                     <div className="email-inner d-flex justify-content-center">
                         <p className="gr">Confirmed as <span className=""
                             style={{ textShadow: "0 1px 2px rgb(0, 0, 0)", fontWeight: "500" }}>&nbsp;bororo@gmail.com&nbsp;</span>
-                            <span><a href="sign-in-email.html">&nbsp;Change</a></span>
+                            <span><Link to="/signin">&nbsp;Change</Link></span>
                         </p>
                     </div>
                 </div>

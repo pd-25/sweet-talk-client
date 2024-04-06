@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import profile from '../../../assets/bl-profile.webp';
 import '../mainapp/MainApp.scss';
+import './LeftSection.scss';
 
 const LeftSection = () => {
     return (
@@ -35,10 +36,17 @@ const LeftSection = () => {
                         </div>
                     </div>
 
-                    <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '0.2rem' }}>
-                        <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> general</Link></p>
-                        <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
-                        <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                    <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '0.2rem', listStyle:'none' }}>
+                        <li className='hide-scroll1' style={{maxHeight:'225px' ,overflowY:'auto'}}>
+                            <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> general</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                            <p><Link to="/app"><i className="fa-solid fa-lock"></i> private</Link></p>
+                        </li>
 
 
                         <button style={{ fontSize: '14px' }} type="button" className="btn d-flex mt-2" data-bs-toggle="modal" data-bs-target="#add-channel-btn">
@@ -66,8 +74,8 @@ const LeftSection = () => {
                                             <div className="visibility-name">
                                                 <h6>Visibility</h6>
                                                 <ul style={{ listStyleType: 'none', marginLeft: '-4%' }}>
-                                                    <li><input type="radio" name="visibility" id="" style={{ width: 'fit-content' }} />&nbsp; Public- anyone in <b>project-02</b></li>
-                                                    <li><input type="radio" name="visibility" id="" style={{ width: 'fit-content' }} />&nbsp; Private- Only specific people</li>
+                                                    <li><input type="radio" name="visibility" value="public" id="visibility" style={{ width: 'fit-content' }} />&nbsp; Public- anyone in <b>project-02</b></li>
+                                                    <li><input type="radio" name="visibility" value="private" id="visibility" style={{ width: 'fit-content' }} />&nbsp; Private- Only specific people</li>
                                                     <ul style={{ listStyleType: 'none', marginLeft: '-3%', opacity: '0.7', fontSize: '14px' }}>
                                                         <input className='mt-2' type="text" name="private-email" id="private-email" placeholder='Enter Email' style={{ border: '1px solid #9d9c9c79' }} />
                                                         <li className='mt-1'>Can only be viewed or joined by invitation</li>
@@ -110,7 +118,7 @@ const LeftSection = () => {
                     </div>
                     <ul className="mid channels nav-link" style={{ lineHeight: '25px' }}>
 
-                        <div className="dms-main" style={{ cursor: 'pointer' }}>
+                        <div className="dms-main" style={{ cursor: 'pointer', maxHeight: '225px', overflowY: 'auto' }}>
                             <p className='m-0'><Link to='/direct-chat-app-with-friend' className="sub-dms">
                                 <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
@@ -123,11 +131,71 @@ const LeftSection = () => {
                                 <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
                             </Link></p>
 
-                            {/* <!-- <div className="sub-dms">
-                                    <img src="https://github.com/mdo.png" alt="hugenerd" width="26" height="26"
-                                        className="rounded">
-                                    <span className="px-2">Mahidra SD</span>
-                                </div> --> */}
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
+
+                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                                <img src={profile} alt="hugenerd" width="26" height="26"
+                                    className="rounded" />
+                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                            </Link></p>
                         </div>
 
                         <div className="add-colleagues">
@@ -149,10 +217,10 @@ const LeftSection = () => {
                                             <h6>Add colleagues :</h6>
 
                                             <div className="email-add-colleagues pt-2">
-                                                <textarea className='w-100 p-2' name="" id="" cols="" rows="5" style={{background:'transparent'}} placeholder='name@sweetsever.com'></textarea>
+                                                <textarea className='w-100 p-2' name="" id="" cols="" rows="5" style={{ background: 'transparent' }} placeholder='name@sweetsever.com'></textarea>
                                             </div>
 
-                                            <div className="btn gr p-2 mt-3" style={{float:'right'}}><button className="btn w-100">Send Invites</button></div>
+                                            <div className="btn gr p-2 mt-3" style={{ float: 'right' }}><button className="btn w-100">Send Invites</button></div>
                                         </form>
                                     </div>
                                 </div>

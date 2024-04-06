@@ -17,7 +17,7 @@ import MainApp from './components/application/mainapp/MainApp';
 import TalkTous from './components/website/talktous/TalkTous';
 import DirectChatMe from './components/application/directchatapp_layout/DirectChatMe';
 import DirectChatFriend from './components/application/directchatapp_layout/DirectChatFriend';
-import OnlyDMLayout from './components/application/directchatapp_layout/OnlyDMLayout';
+
 
 
 import Test from './components/unittest/Test';
@@ -107,11 +107,7 @@ function App() {
       path: '/direct-chat-app-with-friend',
       element: <DirectChatFriend />,
     },
-    {
-      path: '/only-dm',
-      element: <OnlyDMLayout />,
-    },
-    
+   
 
 
 

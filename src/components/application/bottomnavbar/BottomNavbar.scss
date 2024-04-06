@@ -132,6 +132,17 @@
         color: white !important;
     }
 
+    .all-dms-main-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .all-dms-main-scroll {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
     .select-btns-activity .operation-btns-activity {
         display: flex;
         justify-content: start;
@@ -564,37 +575,46 @@
     font-size: 14px;
 }
 
-#add-channel-btn1 .modal-content{
+#add-channel-btn1 .modal-content {
     padding: 5%;
     border: none;
 }
 
-#add-channel-btn1 .modal-body{
+#add-channel-btn1 .modal-body {
     background: #00000088;
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.452);
     border-radius: 10px;
-    .add-channel-heading h4{
+
+    .add-channel-heading h4 {
         font-size: 1.6rem;
     }
-    .input-channel label{
+
+    .input-channel label {
         float: left;
     }
-    .input-channel .add-channel-desc{
+
+    .input-channel .add-channel-desc {
         text-align: left;
     }
-    .visibility-name h6{
+
+    .visibility-name h6 {
         text-align: left;
     }
-    .visibility-name ul{
+
+    .visibility-name ul {
         text-align: left;
     }
-    .visibility-name input::placeholder ,.input-channel input::placeholder{
+
+    .visibility-name input::placeholder,
+    .input-channel input::placeholder {
         font-size: 1rem;
     }
-    .visibility-name .inner-ul li{
+
+    .visibility-name .inner-ul li {
         // float: left;
     }
-    .modal-footer2 .create-channel{
+
+    .modal-footer2 .create-channel {
         padding: 0 !important;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
@@ -603,5 +623,5 @@
         font-size: 1rem;
 
     }
-    
+
 }

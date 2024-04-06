@@ -57,9 +57,9 @@ const BootomNavbar = () => {
                                         </div>
 
 
-                                        <div className="all-dms-main-scroll" style={{ marginTop: '70px', height: '410px', overflowY: 'auto' }}>
+                                        <div className="all-dms-main-scroll" style={{ marginTop: '70px', maxHeight: '410px', overflowY: 'auto' }}>
 
-                                            <Link to='/only-dm' className='m-0' data-bs-dismiss="modal"><p className="sub-dms d-flex align-items-center pb-2" style={{ borderBottom: '1px solid #9d9c9c79' }}>
+                                            <Link to='/direct-chat-app-with-me' className='m-0' data-bs-dismiss="modal"><p className="sub-dms d-flex align-items-center pb-2" style={{ borderBottom: '1px solid #9d9c9c79' }}>
                                                 <img src={profile} alt="hugenerd" width="30" height="30"
                                                     className="rounded" />
                                                 <div className="name-msg d-flex flex-column align-items-start w-100">
@@ -265,8 +265,8 @@ const BootomNavbar = () => {
                                                                             <div className="visibility-name">
                                                                                 <h6>Visibility</h6>
                                                                                 <ul style={{ listStyleType: 'none', marginLeft: '-4%' }}>
-                                                                                    <li><input type="radio" name="visibility" id="" style={{ width: 'fit-content' }} />&nbsp; Public- anyone in <b>project-02</b></li>
-                                                                                    <li><input type="radio" name="visibility" id="" style={{ width: 'fit-content' }} />&nbsp; Private- Only specific people</li>
+                                                                                    <li><input type="radio" name="visibility" value="public" id="visibility" style={{ width: 'fit-content' }} />&nbsp; Public- anyone in <b>project-02</b></li>
+                                                                                    <li><input type="radio" name="visibility" value="private" id="visibility" style={{ width: 'fit-content' }} />&nbsp; Private- Only specific people</li>
                                                                                     <ul className='inner-ul' style={{ listStyleType: 'none', marginLeft: '-3%', opacity: '0.7', fontSize: '14px' }}>
                                                                                         <input className='mt-2' type="text" name="private-email" id="private-email" placeholder='Enter Email' style={{ border: '1px solid #9d9c9c79' }} />
                                                                                         <li className='mt-1'>Can only be viewed or joined by invitation</li>
@@ -287,7 +287,7 @@ const BootomNavbar = () => {
                                             </div>
                                         </div>
 
-                                        <div className="all-dms-main-scroll pt-3" style={{ marginTop: '30px', height: '400px', overflowY: 'auto', borderTop: '1px solid #9d9c9c79' }}>
+                                        <div className="all-dms-main-scroll pt-3" style={{ marginTop: '30px', maxHeight: '400px', overflowY: 'auto', borderTop: '1px solid #9d9c9c79' }}>
                                             {filteredChannels.map(item => (
                                                 <a key={item.id} href="#" className="m-0" data-bs-dismiss="modal">
                                                     <p className="sub-dms d-flex align-items-center pb-2" style={{ borderBottom: '1px solid #9d9c9c79' }}>

@@ -36,8 +36,8 @@ const LeftSection = () => {
                         </div>
                     </div>
 
-                    <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '0.2rem', listStyle:'none' }}>
-                        <li className='hide-scroll1' style={{maxHeight:'225px' ,overflowY:'auto'}}>
+                    <ul className="mid channels nav-link" style={{ lineHeight: '7px', marginLeft: '0.2rem', listStyle: 'none' }}>
+                        <li className='hide-scroll1' style={{ maxHeight: '225px', overflowY: 'auto' }}>
                             <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> general</Link></p>
                             <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
                             <p><Link to="/app"><i className="fa-solid fa-hashtag"></i> random</Link></p>
@@ -118,84 +118,38 @@ const LeftSection = () => {
                     </div>
                     <ul className="mid channels nav-link" style={{ lineHeight: '25px' }}>
 
-                        <div className="dms-main" style={{ cursor: 'pointer', maxHeight: '225px', overflowY: 'auto' }}>
+                        <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                            <img src={profile} alt="hugenerd" width="26" height="26"
+                                className="rounded" />
+                            <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                        </Link></p>
+
+                        <div className="dms-main mt-2" style={{ cursor: 'pointer', maxHeight: '200px', overflowY: 'auto' }}>
+                        
                             <p className='m-0'><Link to='/direct-chat-app-with-friend' className="sub-dms">
                                 <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
                                 <span className="px-2">Animallo</span>
                             </Link></p>
 
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                            <p className='m-0'><Link to='/direct-chat-app-with-friend' className="sub-dms">
                                 <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                                <span className="px-2">Animallo</span>
                             </Link></p>
 
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                            <p className='m-0'><Link to='/direct-chat-app-with-friend' className="sub-dms">
                                 <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                                <span className="px-2">Animallo</span>
                             </Link></p>
 
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
+                            <p className='m-0'><Link to='/direct-chat-app-with-friend' className="sub-dms">
                                 <img src={profile} alt="hugenerd" width="26" height="26"
                                     className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
+                                <span className="px-2">Animallo</span>
                             </Link></p>
 
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
-
-                            <p className='m-0'><Link to='/direct-chat-app-with-me' className="sub-dms">
-                                <img src={profile} alt="hugenerd" width="26" height="26"
-                                    className="rounded" />
-                                <span className="px-2">Saklin<span className="hide-2"> ( you )</span></span>
-                            </Link></p>
                         </div>
 
                         <div className="add-colleagues">

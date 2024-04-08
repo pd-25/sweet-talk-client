@@ -148,5 +148,179 @@
 }
 
 
-//profile view dropDown menu itme 
+//activity---------------------------------------------------------------->
+#activity-btn1 .modal-body-dms {
+    line-height: normal;
+    padding: 3%;
+    padding-top: 1%;
+    margin: 3%;
 
+    .dms-main .dms-main-inner {
+        .btn-bar button {
+            font-size: 1rem !important;
+            float: left;
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .btn-bar button i {
+            font-size: 1rem !important;
+            float: left;
+            font-weight: 600;
+        }
+
+        .btn-bar p {
+            font-size: 1rem;
+            float: left;
+            margin: 0;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .dm-search-content {
+            border: 1px solid #78757580;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        .dm-search-content input {
+            border: none;
+            background-color: transparent;
+            opacity: 0.8;
+        }
+
+        .dm-search-content input::placeholder {
+            font-size: 1rem;
+        }
+
+        .dm-search-content i {
+            font-size: 1rem;
+        }
+
+        .small-heading-fixed p {
+            padding: 0;
+            margin: 0;
+            font-size: 0.9rem;
+            float: left;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+    }
+
+    .all-dms-main-scroll .fa-hashtag,
+    .all-dms-main-scroll .fa-lock {
+        color: white !important;
+    }
+
+    .all-dms-main-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .all-dms-main-scroll {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .select-btns-activity .operation-btns-activity {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+
+        .btn {
+            margin: 0;
+            padding: 0;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+}
+
+
+//activity btns add channels
+.add-btn-activity1 {
+    margin: 0;
+    padding: 0;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.add-btn-activity1 i {
+    color: white !important;
+    font-size: 1rem;
+}
+
+#add-channel-btn11 .modal-content {
+    padding: 5%;
+    border: none;
+}
+
+#add-channel-btn11 .modal-body {
+    background: #00000088;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.452);
+    border-radius: 10px;
+
+    .add-channel-heading h4 {
+        font-size: 1.6rem;
+    }
+
+    .input-channel label {
+        float: left;
+    }
+    .input-channel input{
+        font-weight: 500;
+        opacity: 0.8;
+    }
+
+    .input-channel .add-channel-desc {
+        text-align: left;
+    }
+
+    .visibility-name h6 {
+        text-align: left;
+    }
+
+    .visibility-name ul {
+        text-align: left;
+    }
+
+    .visibility-name input::placeholder,
+    .input-channel input::placeholder {
+        font-size: 1rem;
+    }
+
+    .visibility-name .inner-ul li {
+        // float: left;
+    }
+
+    .modal-footer2 .create-channel {
+        padding: 0 !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        font-size: 1rem;
+
+    }
+
+}
